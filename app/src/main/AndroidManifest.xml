@@ -15,6 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ParentsActivity" />
+        <activity android:name=".StudentsActivity" />
+        <activity android:name=".HighScoolActivity" />
+        <activity android:name=".CdiActivity" />
+        <activity android:name=".CvlActivity" />
+        <activity android:name=".InfosActivity" />
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".OrietationActivity"></activity>
     </application>
 
 </manifest>
