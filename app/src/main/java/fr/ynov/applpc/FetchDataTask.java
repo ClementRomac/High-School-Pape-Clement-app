@@ -2,7 +2,9 @@ package fr.ynov.applpc;
 
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.provider.Settings;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONException;
 
@@ -16,22 +18,22 @@ import java.net.URL;
 /**
  * Created by clément on 17/02/2016.
  */
-public class FetchDataTask extends AsyncTask<String, Void, String[]> {
+public class FetchDataTask extends AsyncTask<String, Void, Object> {
     @Override
-    protected String[] doInBackground(String... params) {
+    protected Object doInBackground(String... params) {
         final String LOG_TAG = this.getClass().getSimpleName();
 
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
-        String forecastJson = null;
-
-        String format="json";
+        String DataJson = null;
 
         try{
             final String FORECAST_BASE_URL ="http://groovyou.hol.es/API_LPC.php?";
 
             Uri builtUri =Uri.parse(FORECAST_BASE_URL).buildUpon()
-                    .appendQueryParameter(params[0], "true").build();
+                    .appendQueryParameter("infos", params[0])
+                    .appendQueryParameter("apikey", "test")
+                    .build();
             //Construct URL
             URL url = new URL(builtUri.toString());
 
@@ -57,8 +59,8 @@ public class FetchDataTask extends AsyncTask<String, Void, String[]> {
                 return null;
             }
 
-            forecastJson = buffer.toString();
-            Log.e("JSON", forecastJson);
+            DataJson = buffer.toString();
+            Log.e("JSON", DataJson);
 
         }catch (IOException e){
             Log.e(LOG_TAG, "Error", e);
@@ -75,23 +77,21 @@ public class FetchDataTask extends AsyncTask<String, Void, String[]> {
                 }
             }
         }
+
         //WeatherDataParser weatherDataParser = new WeatherDataParser(getContext());
         //try {
-          //  return weatherDataParser.getWeatherDataFromJson(forecastJson, numDays);
+          //  return weatherDataParser.getWeatherDataFromJson(DataJson, numDays);
         //} catch (JSONException e) {
            // e.printStackTrace();
         //}
 
-        return null;
+        return DataJson;
     }
 
     @Override
-    protected void onPostExecute(String[] strings) {
-        if(strings != null){
-            //mForecastAdapter.clear();
-            for(String dayForecastString : strings){
-                //mForecastAdapter.add(dayForecastString);
-            }
+    protected void onPostExecute(Object object) {
+        if(object != null){
+
         }
     }
 }
