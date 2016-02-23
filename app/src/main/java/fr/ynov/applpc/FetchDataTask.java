@@ -60,7 +60,7 @@ public class FetchDataTask extends AsyncTask<String, Void, Object> {
             }
 
             DataJson = buffer.toString();
-            Log.e("JSON", DataJson);
+            //Log.e("JSON", DataJson);
 
         }catch (IOException e){
             Log.e(LOG_TAG, "Error", e);

@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import org.json.JSONException;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,9 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void downloadDatas() {
         if(isOnline()) {
-            FetchDataTask fetchDataTask = new FetchDataTask();
-            Object test = fetchDataTask.execute();
-            //fetchDataTask.execute("infos_students");
+            DataParents dataParents = new DataParents(this);
+            try {
+                dataParents.getDatas();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
         else{
             Toast.makeText(this, "Vous n'êtes pas connecté à Internet, vos données ne sont donc pas actualisée.", Toast.LENGTH_LONG).show();
