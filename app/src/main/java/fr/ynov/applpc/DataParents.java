@@ -1,7 +1,9 @@
 package fr.ynov.applpc;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -17,22 +19,31 @@ public class DataParents {
     private Context context;
 
     public DataParents(Context context){
+
         this.context = context;
+
     }
 
     public String[] getDatas() throws JSONException {
-        FetchDataTask fetchDataTask = new FetchDataTask();
-        fetchDataTask.execute("infos_parents");
-        Object dataJSON = null;
-        try {
-            dataJSON = fetchDataTask.get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
+        if(isOnline()) {
+            FetchDataTask fetchDataTask = new FetchDataTask();
+            fetchDataTask.execute("infos_parents");
+            Object dataJSON = null;
+            try {
+                dataJSON = fetchDataTask.get();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+
+            return parseDatas(dataJSON);
+        }
+        else{
+            Toast.makeText(context, "Vous n'êtes pas connecté à Internet, vos données ne sont donc pas actualisée.", Toast.LENGTH_LONG).show();
         }
 
-        return parseDatas(dataJSON);
+        return null;
     }
 
     private String[] parseDatas(Object datas) throws JSONException {
@@ -49,5 +60,13 @@ public class DataParents {
         }
 
         return null;
+    }
+
+    public boolean isOnline() {
+        ConnectivityManager cm =
+                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        return cm.getActiveNetworkInfo() != null &&
+                cm.getActiveNetworkInfo().isConnectedOrConnecting();
     }
 }
