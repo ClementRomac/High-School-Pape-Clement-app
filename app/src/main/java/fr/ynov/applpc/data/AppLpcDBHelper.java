@@ -23,7 +23,7 @@ public class AppLpcDBHelper extends SQLiteOpenHelper{
                 ParentsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 ParentsEntry.COLUMN_DATE + " TEXT NOT NULL," +
                 ParentsEntry.COLUMN_TITLE + " TEXT NOT NULL," +
-                ParentsEntry.COLUMN_CONTENT + "TEXT NOT NULL);";
+                ParentsEntry.COLUMN_CONTENT + " TEXT NOT NULL);";
 
         db.execSQL(SQL_CREATE_PARENTS_TABLE);
     }
