@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:layout_margin="50dp"
+    android:background="#c5e1b0"
+    >
 
+    <Button
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:text="CDI"
+        android:id="@+id/CDI"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.09"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+      <!--  android:onclick="redirectCDI"-->
+
+    <Button
+        android:layout_width="184dp"
+        android:layout_height="wrap_content"
+        android:text="CVL"
+        android:id="@+id/CVL"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.09"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+       <!-- android:onclick="redirectCVL"-->
+
+    <Button
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:text="Coordonnées"
+        android:id="@+id/contact"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.09"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+       <!-- android:onclick="redirectCoordonnees"-->
+
+    <Button
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:text="Orientation"
+        android:id="@+id/Orientation"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.09"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+       <!-- android:onclick="redirectOrientation"-->
+
+    <Button
+        android:layout_width="186dp"
+        android:layout_height="wrap_content"
+        android:text="Infos"
+        android:id="@+id/Infos"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.09"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+       <!-- android:onclick="redirectInfos"-->
 </LinearLayout>

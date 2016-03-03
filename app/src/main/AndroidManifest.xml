@@ -19,13 +19,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".ParentsActivity" />
-        <activity android:name=".StudentsActivity" />
         <activity android:name=".HighScoolActivity" />
         <activity android:name=".CdiActivity" />
         <activity android:name=".CvlActivity" />
         <activity android:name=".InfosActivity" />
         <activity android:name=".ContactActivity" />
-        <activity android:name=".OrietationActivity"></activity>
+        <activity android:name=".OrietationActivity" />
+        <activity android:name=".StudentsActivity"></activity>
     </application>
 
 </manifest>
