@@ -14,8 +14,8 @@
         android:id="@+id/CDI"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.09"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:onclick="redirectCDI"/>
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+      <!--  android:onclick="redirectCDI"-->
 
     <Button
         android:layout_width="184dp"
@@ -24,8 +24,8 @@
         android:id="@+id/CVL"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.09"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:onclick="redirectCVL"/>
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+       <!-- android:onclick="redirectCVL"-->
 
     <Button
         android:layout_width="186dp"
@@ -34,8 +34,8 @@
         android:id="@+id/contact"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.09"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:onclick="redirectCoordonnees"/>
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+       <!-- android:onclick="redirectCoordonnees"-->
 
     <Button
         android:layout_width="186dp"
@@ -44,8 +44,8 @@
         android:id="@+id/Orientation"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.09"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:onclick="redirectOrientation"/>
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+       <!-- android:onclick="redirectOrientation"-->
 
     <Button
         android:layout_width="186dp"
@@ -54,6 +54,6 @@
         android:id="@+id/Infos"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.09"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:onclick="redirectInfos"/>
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+       <!-- android:onclick="redirectInfos"-->
 </LinearLayout>

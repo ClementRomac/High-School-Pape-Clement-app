@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppLPC</string>
+    <string name="title_activity_students">StudentsActivity</string>
 </resources>
