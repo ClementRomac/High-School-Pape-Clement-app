@@ -1,4 +1,4 @@
-package fr.ynov.applpc;
+package fr.ynov.applpc.data;
 
 import android.net.Uri;
 import android.os.AsyncTask;
