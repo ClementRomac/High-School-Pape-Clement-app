@@ -23,11 +23,11 @@
             android:layout_marginRight="100dp"
             android:layout_gravity="center_horizontal" />
 
-        <LinearLayout
+        <!--<LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp">-->
 
             <ImageView
                 android:layout_width="match_parent"
@@ -35,30 +35,36 @@
                 android:id="@+id/accueil_lycee2"
                 android:src="@drawable/lycee2" />
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
 
-                <Button
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/accueil_retour_carroussel"
-                    android:text="&lt;" />
+                    android:src="@drawable/slide_to_left"
+                    android:background="#00ffffff"
+                    android:layout_gravity="left" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/accueil_imageView3" />
 
-                <Button
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=">"
-                    android:id="@+id/accueil_avance_carroussel" />
-            </LinearLayout>
+                    android:id="@+id/accueil_avance_carroussel"
+                    android:src="@drawable/slide_to_right_bleu"
+                    android:background="#00ffffff"
+                    android:layout_gravity="right" />
 
-        </LinearLayout>
+            </LinearLayout>-->
+
+        <!--</LinearLayout>-->
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -73,7 +79,8 @@
                 android:id="@+id/accueil_lycee"
                 android:src="@drawable/lycee"
                 android:layout_alignParentRight="false"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false" />
 
             <LinearLayout
                 android:orientation="horizontal"

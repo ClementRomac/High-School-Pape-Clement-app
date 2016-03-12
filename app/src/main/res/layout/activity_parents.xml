@@ -91,14 +91,43 @@
             </LinearLayout>
 
             <ScrollView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/scrollView" >
 
-                <ListView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/listView" />
+                    android:background="@color/parent_bck_actu"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Medium Text"
+                        android:id="@+id/textView3"
+                        android:textColor="@color/accueil_bck_parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Small Text"
+                        android:id="@+id/textView4"
+                        android:textColor="@color/parent_header_sc"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="New Text"
+                        android:id="@+id/textView5"
+                        android:textColor="@color/parent_header_sc"
+                        android:layout_marginBottom="10dp" />
+                </LinearLayout>
             </ScrollView>
 
         </LinearLayout>
