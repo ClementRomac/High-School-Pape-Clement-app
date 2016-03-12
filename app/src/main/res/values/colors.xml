@@ -3,4 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="accueil_bck_lycee">#46C6E7</color>
+    <color name="accueil_bck_eleve">#C2BC33</color>
+    <color name="accueil_bck_parent">#EE3560</color>
+    <color name="accueil_bck_lycee_trans">#9946C6E7</color>
+    <color name="accueil_bck_eleve_trans">#99C2BC33</color>
+    <color name="accueil_bck_parent_trans">#99EE3560</color>
+    <color name="main_font">#ffffff</color>
+    <color name="parent_header_sc">#1D1D1B</color>
+    <color name="parent_bck_actu">#EBEBEB</color>
+
 </resources>

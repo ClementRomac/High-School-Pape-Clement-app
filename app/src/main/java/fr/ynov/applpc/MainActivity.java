@@ -1,50 +1,63 @@
 package fr.ynov.applpc;
 
+
+import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import fr.ynov.applpc.data.DataParents;
 
 public class MainActivity extends AppCompatActivity {
+    private RelativeLayout lycee = null;
+    private RelativeLayout eleve = null;
+    private RelativeLayout parent = null;
+
+    private View.OnClickListener redirect_lycee = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, HighScoolActivity.class);
+
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener redirect_eleve = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, StudentsActivity.class);
+
+            startActivity(intent);
+        }
+    };
+
+    private View.OnClickListener redirect_parent = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, ParentsActivity.class);
+
+            startActivity(intent);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        lycee = (RelativeLayout) findViewById(R.id.accueil_rl_lycee);
+        eleve = (RelativeLayout) findViewById(R.id.accueil_rl_eleve);
+        parent = (RelativeLayout) findViewById(R.id.accueil_rl_parent);
 
-        final Button buttonCdi = (Button) findViewById(R.id.buttoncdi);
-        buttonCdi.setOnClickListener(new View.OnClickListener() {
+        lycee.setOnClickListener(redirect_lycee);
+        eleve.setOnClickListener(redirect_eleve);
+        parent.setOnClickListener(redirect_parent);
 
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CdiActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        final Button buttonCvl = (Button) findViewById(R.id.buttoncvl);
-        buttonCvl.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CvlActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        final Button buttonInfo = (Button) findViewById(R.id.buttoninfo);
-        buttonInfo.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, InfosActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override

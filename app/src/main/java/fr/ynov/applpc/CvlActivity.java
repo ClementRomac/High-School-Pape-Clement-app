@@ -3,8 +3,10 @@ package fr.ynov.applpc;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CvlActivity extends AppCompatActivity {
 //Nathan
@@ -13,16 +15,20 @@ public class CvlActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cvl);
 
-        ArrayList<ModelInfo> arrayModelInfo = new ArrayList<>();
-        ModelInfoAdapter adapter = new ModelInfoAdapter(this, arrayModelInfo);
         ListView listView = (ListView) findViewById(R.id.listview);
-        listView.setAdapter(adapter);
+        ArrayList<HashMap<String, String>> listItem = new ArrayList<HashMap<String, String>>();
+        HashMap<String, String> map;
 
         for (int i = 0; i <= 10; i++){
-
-            ModelInfo newInfo = new ModelInfo("Titre"+i, "text"+i);
-            adapter.add(newInfo);
-
+            map = new HashMap<String, String>();
+            map.put("title", "title"+i);
+            map.put("text", "text"+i);
+            listItem.add(map);
         }
-    }
+
+        SimpleAdapter mSchedule = new SimpleAdapter (this.getBaseContext(), listItem, R.layout.list_item_view,
+                new String[] {"title", "text"}, new int[] {R.id.title, R.id.text});
+
+        listView.setAdapter(mSchedule);
+}
 }
