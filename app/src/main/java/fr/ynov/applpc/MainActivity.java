@@ -1,14 +1,22 @@
 package fr.ynov.applpc;
 
+
 import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-public class MainActivity extends AppCompatActivity {
+import fr.ynov.applpc.data.DataParents;
+import fr.ynov.applpc.data.DataStudents;
+
+public class MainActivity extends ActionBarActivity {
     private RelativeLayout lycee = null;
     private RelativeLayout eleve = null;
     private RelativeLayout parent = null;
@@ -44,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
         lycee = (RelativeLayout) findViewById(R.id.accueil_rl_lycee);
         eleve = (RelativeLayout) findViewById(R.id.accueil_rl_eleve);
         parent = (RelativeLayout) findViewById(R.id.accueil_rl_parent);
@@ -61,8 +70,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void downloadDatas() {
-        FetchDataTask fetchDataTask = new FetchDataTask();
-        fetchDataTask.execute("infos_parents");
+        DataStudents dataStudents = new DataStudents(this);
+        dataStudents.getClasses();
+        dataStudents.getScheduleByClass("Terminale SIN");
+
     }
 
 

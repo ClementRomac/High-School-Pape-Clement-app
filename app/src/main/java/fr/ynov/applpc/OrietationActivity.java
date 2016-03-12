@@ -1,9 +1,10 @@
 package fr.ynov.applpc;
 
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class OrietationActivity extends AppCompatActivity {
+public class OrietationActivity extends ActionBarActivity {
 //Axel tt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
