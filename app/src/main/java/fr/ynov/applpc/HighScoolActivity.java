@@ -1,7 +1,10 @@
 package fr.ynov.applpc;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 
 public class HighScoolActivity extends AppCompatActivity {
 //Pierre
@@ -9,6 +12,17 @@ public class HighScoolActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_high_scool);
+        //Temporaire
+            final Button buttonCdi = (Button) findViewById(R.id.CDI);
+            buttonCdi.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(HighScoolActivity.this, CdiActivity.class);
+                    startActivity(intent);
+                }
+            });
+        //Fin temporaire
     }
 
     public void redirectCDI() {
