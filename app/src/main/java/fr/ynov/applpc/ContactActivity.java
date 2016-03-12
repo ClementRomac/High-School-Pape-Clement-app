@@ -1,9 +1,10 @@
 package fr.ynov.applpc;
 
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ContactActivity extends AppCompatActivity {
+public class ContactActivity extends ActionBarActivity {
 //Axel
     @Override
     protected void onCreate(Bundle savedInstanceState) {

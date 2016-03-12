@@ -1,16 +1,20 @@
 package fr.ynov.applpc;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class HighScoolActivity extends AppCompatActivity {
+public class HighScoolActivity extends ActionBarActivity {
 //Pierre
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Lycée");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.accueil_bck_lycee)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.high_school_fleche_retour);
         setContentView(R.layout.activity_high_scool);
         //Temporaire
             final Button buttonCdi = (Button) findViewById(R.id.CDI);

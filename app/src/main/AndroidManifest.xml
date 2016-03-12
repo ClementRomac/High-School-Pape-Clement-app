@@ -10,7 +10,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
+        android:theme="@style/MyAppTheme.NoShadow">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,14 +18,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ParentsActivity" />
-        <activity android:name=".HighScoolActivity" />
-        <activity android:name=".CdiActivity" />
-        <activity android:name=".CvlActivity" />
+        <activity android:name=".ParentsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.ynov.applpc.MainActivity" />
+        </activity>
+        <activity android:name=".HighScoolActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="fr.ynov.applpc.MainActivity" />
+        </activity>
+        <activity android:name=".CdiActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="fr.ynov.applpc.HighScoolActivity" />
+        </activity>
+        <activity android:name=".CvlActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.ynov.applpc.HighScoolActivity" />
+        </activity>
         <activity android:name=".InfosActivity" />
-        <activity android:name=".ContactActivity" />
-        <activity android:name=".OrietationActivity" />
-        <activity android:name=".StudentsActivity"></activity>
+        <activity android:name=".ContactActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.ynov.applpc.HighScoolActivity" />
+        </activity>
+        <activity android:name=".OrietationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.ynov.applpc.HighScoolActivity" />
+        </activity>
+        <activity android:name=".StudentsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fr.ynov.applpc.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

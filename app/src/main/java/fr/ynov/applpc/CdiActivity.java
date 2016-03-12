@@ -1,12 +1,13 @@
 package fr.ynov.applpc;
 
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class CdiActivity extends AppCompatActivity {
+public class CdiActivity extends ActionBarActivity {
     //Nathan
     @Override
     protected void onCreate(Bundle savedInstanceState) {
