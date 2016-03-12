@@ -23,7 +23,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="430dp"
-        android:id="@+id/listview"
+        android:id="@+id/listview_cdi"
         android:layout_marginTop="50dp"/>
 
 </LinearLayout>

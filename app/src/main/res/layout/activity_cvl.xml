@@ -15,7 +15,7 @@
         android:layout_height="40dp"
         android:text="CVL"
         android:layout_gravity="center_horizontal|top"
-        android:id="@+id/text_cdi"
+        android:id="@+id/text_activity_cvl"
         android:autoText="false"
         android:textSize="30dp"
         android:textColor="#000" />
@@ -23,7 +23,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="430dp"
-        android:id="@+id/listview"
+        android:id="@+id/listview_cvl"
         android:layout_marginTop="50dp"/>
 
 </LinearLayout>
