@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import fr.ynov.applpc.data.DataParents;
+import fr.ynov.applpc.data.DataStudents;
 
 public class MainActivity extends AppCompatActivity {
     private RelativeLayout lycee = null;
@@ -67,8 +68,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void downloadDatas() {
-        DataParents dataParents = new DataParents(this);
-        dataParents.getDatas();
+        DataStudents dataStudents = new DataStudents(this);
+        dataStudents.getClasses();
+        dataStudents.getScheduleByClass("Terminale SIN");
 
     }
 

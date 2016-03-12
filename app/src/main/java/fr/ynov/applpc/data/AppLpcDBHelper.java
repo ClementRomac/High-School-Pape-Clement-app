@@ -20,17 +20,28 @@ public class AppLpcDBHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         final String SQL_CREATE_PARENTS_TABLE = "CREATE TABLE " +
                 ParentsEntry.TABLE_NAME + "(" +
-                ParentsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 ParentsEntry.COLUMN_DATE + " TEXT NOT NULL," +
                 ParentsEntry.COLUMN_TITLE + " TEXT NOT NULL," +
                 ParentsEntry.COLUMN_CONTENT + " TEXT NOT NULL);";
 
         db.execSQL(SQL_CREATE_PARENTS_TABLE);
+
+        final String SQL_CREATE_STUDENTS_TABLE = "CREATE TABLE " +
+                StudentsEntry.TABLE_NAME + "(" +
+                StudentsEntry.COLUMN_CLASS + " TEXT NOT NULL," +
+                StudentsEntry.COLUMN_MONDAY + " TEXT NOT NULL," +
+                StudentsEntry.COLUMN_TUESDAY + " TEXT NOT NULL," +
+                StudentsEntry.COLUMN_WEDNESDAY + " TEXT NOT NULL," +
+                StudentsEntry.COLUMN_THURSDAY + " TEXT NOT NULL," +
+                StudentsEntry.COLUMN_FRIDAY + " TEXT NOT NULL);";
+
+        db.execSQL(SQL_CREATE_STUDENTS_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + ParentsEntry.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + StudentsEntry.TABLE_NAME);
         onCreate(db);
     }
 }

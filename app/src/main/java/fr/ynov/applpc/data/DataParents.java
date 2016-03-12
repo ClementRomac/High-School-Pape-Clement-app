@@ -109,6 +109,7 @@ public class DataParents {
 
             //Log.d(LOG_TAG+"-READ-DB", result[i][0]+"-"+result[i][1]+"-"+result[i][2]);
         }
+        cursor.close();
         return result;
     }
 
