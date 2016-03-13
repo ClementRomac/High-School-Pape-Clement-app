@@ -1,34 +1,26 @@
 package fr.ynov.applpc.data;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.ConnectivityManager;
 import android.widget.Toast;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.concurrent.ExecutionException;
-
-import fr.ynov.applpc.data.AppLpcDBContract.*;
+import fr.ynov.applpc.data.AppLpcDBContract.CDIEntry;
 
 /**
  * Created by clément on 23/02/2016.
  */
-public class DataParentsProvider extends CustomDataProvider{
+public class DataCDIProvider extends CustomDataProvider{
 
-    public DataParentsProvider(Context context){
+    public DataCDIProvider(Context context){
 
         this.context = context;
         mOpenHelper = new AppLpcDBHelper(this.context);
-        table_colums = new String[]{ParentsEntry.COLUMN_TITLE,
-                ParentsEntry.COLUMN_DATE,
-                ParentsEntry.COLUMN_CONTENT
+        table_colums = new String[]{CDIEntry.COLUMN_TITLE,
+                CDIEntry.COLUMN_DATE,
+                CDIEntry.COLUMN_CONTENT
         };
-        table_name = ParentsEntry.TABLE_NAME;
+        table_name = CDIEntry.TABLE_NAME;
 
     }
 
@@ -48,7 +40,7 @@ public class DataParentsProvider extends CustomDataProvider{
     public String getLastDate(){
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();
         String[] columnsToRead = {
-                HighSchoolEntry.COLUMN_DATE,
+                CDIEntry.COLUMN_DATE,
         };
         Cursor cursor = db.query(table_name, columnsToRead, null, null, null, null, "1");
         cursor.moveToFirst();
@@ -62,9 +54,9 @@ public class DataParentsProvider extends CustomDataProvider{
     private String[][] readDatasDB(){
         SQLiteDatabase db = mOpenHelper.getWritableDatabase();
         String[] columnsToRead = {
-                AppLpcDBContract.ParentsEntry.COLUMN_TITLE,
-                AppLpcDBContract.ParentsEntry.COLUMN_DATE,
-                AppLpcDBContract.ParentsEntry.COLUMN_CONTENT
+                CDIEntry.COLUMN_TITLE,
+                CDIEntry.COLUMN_DATE,
+                CDIEntry.COLUMN_CONTENT
         };
         Cursor cursor = db.query(table_name, columnsToRead, null, null, null, null, null);
         cursor.moveToFirst();

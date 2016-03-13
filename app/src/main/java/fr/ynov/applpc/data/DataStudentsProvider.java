@@ -69,11 +69,9 @@ public class DataStudentsProvider extends CustomDataProvider{
         cursor.moveToFirst(); //Read Schedule where Class = Class asked
         String[][] result = new String[cursor.getCount()][columnsToRead.length];
         for (int i=0; i<cursor.getCount(); i++){
-            result[i][0] = cursor.getString(cursor.getColumnIndex(StudentsEntry.COLUMN_MONDAY));
-            result[i][1] = cursor.getString(cursor.getColumnIndex(StudentsEntry.COLUMN_TUESDAY));
-            result[i][2] = cursor.getString(cursor.getColumnIndex(StudentsEntry.COLUMN_WEDNESDAY));
-            result[i][3] = cursor.getString(cursor.getColumnIndex(StudentsEntry.COLUMN_THURSDAY));
-            result[i][4] = cursor.getString(cursor.getColumnIndex(StudentsEntry.COLUMN_FRIDAY));
+            for(int j=0; j<columnsToRead.length; j++) {
+                result[i][j] = cursor.getString(cursor.getColumnIndex(columnsToRead[j]));
+            }
 
             cursor.moveToNext();
 
