@@ -2,19 +2,13 @@ package fr.ynov.applpc;
 
 
 import android.content.Intent;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-import android.content.Intent;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import fr.ynov.applpc.data.DataParents;
-import fr.ynov.applpc.data.DataStudents;
+import fr.ynov.applpc.data.DataStudentsProvider;
 
 public class MainActivity extends ActionBarActivity {
     private RelativeLayout lycee = null;
@@ -66,15 +60,14 @@ public class MainActivity extends ActionBarActivity {
     @Override
     public void onStart() {
         super.onStart();
-        downloadDatas();
     }
 
-    private void downloadDatas() {
-        DataStudents dataStudents = new DataStudents(this);
-        dataStudents.getClasses();
-        dataStudents.getScheduleByClass("Terminale SIN");
+    /*private void downloadDatas() {
+        DataStudentsProvider dataStudentsProvider = new DataStudentsProvider(this);
+        dataStudentsProvider.getClasses();
+        dataStudentsProvider.getScheduleByClass("Terminale SIN");
 
-    }
+    }*/
 
 
 }
