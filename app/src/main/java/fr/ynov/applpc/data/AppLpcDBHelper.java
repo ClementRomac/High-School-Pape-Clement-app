@@ -36,12 +36,40 @@ public class AppLpcDBHelper extends SQLiteOpenHelper{
                 StudentsEntry.COLUMN_FRIDAY + " TEXT NOT NULL);";
 
         db.execSQL(SQL_CREATE_STUDENTS_TABLE);
+
+        final String SQL_CREATE_HIGH_SCHOOL_TABLE = "CREATE TABLE " +
+                HighSchoolEntry.TABLE_NAME + "(" +
+                HighSchoolEntry.COLUMN_DATE + " TEXT NOT NULL," +
+                HighSchoolEntry.COLUMN_TITLE + " TEXT NOT NULL," +
+                HighSchoolEntry.COLUMN_CONTENT + " TEXT NOT NULL);";
+
+        db.execSQL(SQL_CREATE_HIGH_SCHOOL_TABLE);
+
+        final String SQL_CREATE_CVL_TABLE = "CREATE TABLE " +
+                CVLEntry.TABLE_NAME + "(" +
+                CVLEntry.COLUMN_DATE + " TEXT NOT NULL," +
+                CVLEntry.COLUMN_TITLE + " TEXT NOT NULL," +
+                CVLEntry.COLUMN_CONTENT + " TEXT NOT NULL);";
+
+        db.execSQL(SQL_CREATE_CVL_TABLE);
+
+        final String SQL_CREATE_CDI_TABLE = "CREATE TABLE " +
+                CDIEntry.TABLE_NAME + "(" +
+                CDIEntry.COLUMN_DATE + " TEXT NOT NULL," +
+                CDIEntry.COLUMN_TITLE + " TEXT NOT NULL," +
+                CDIEntry.COLUMN_CONTENT + " TEXT NOT NULL);";
+
+        db.execSQL(SQL_CREATE_CDI_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + ParentsEntry.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + StudentsEntry.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + HighSchoolEntry.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + CVLEntry.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + CDIEntry.TABLE_NAME);
+
         onCreate(db);
     }
 }

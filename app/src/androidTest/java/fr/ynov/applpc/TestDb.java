@@ -30,35 +30,97 @@ public class TestDb extends AndroidTestCase {
         db.close();
     }
 
-    public void testInsertReadDb(){
+    /////////////// PARENTS //////////////////
+    public void testInsertReadDbParents(){
+        String[] table_columns = new String[]{AppLpcDBContract.ParentsEntry.COLUMN_TITLE,
+                AppLpcDBContract.ParentsEntry.COLUMN_DATE,
+                AppLpcDBContract.ParentsEntry.COLUMN_CONTENT
+        };
+        String[] testValues = new String[]{"Test news 1 parents",
+            "01/01/2002",
+            "Test de ma news 1 parents!"};
+
+        testInsertReadDB(AppLpcDBContract.ParentsEntry.TABLE_NAME, table_columns, testValues);
+    }
+
+    /////////////// STUDENTS //////////////////
+    public void testInsertReadDbStudents(){
+        String[] table_columns = {AppLpcDBContract.StudentsEntry.COLUMN_CLASS,
+                AppLpcDBContract.StudentsEntry.COLUMN_MONDAY,
+                AppLpcDBContract.StudentsEntry.COLUMN_TUESDAY,
+                AppLpcDBContract.StudentsEntry.COLUMN_WEDNESDAY,
+                AppLpcDBContract.StudentsEntry.COLUMN_THURSDAY,
+                AppLpcDBContract.StudentsEntry.COLUMN_FRIDAY
+        };
+
+        String[] testValues = new String[]{"Terminale STI2D SIN",
+            "8h-12h: SIN \n 13h-17h : TRANSVERSAL",
+            "8h-12h: MATHS \n 13h-17h : TRANSVERSAL",
+            "8h-12h: SIN \n 13h-17h : MATHS",
+            "8h-12h: PYSIQUE \n 13h-17h : TRANSVERSAL",
+            "8h-12h: SIN \n 13h-17h : PHYSIQUE"};
+
+        testInsertReadDB(AppLpcDBContract.StudentsEntry.TABLE_NAME, table_columns, testValues);
+    }
+
+    /////////////// HIGH SCHOOL //////////////////
+    public void testInsertReadDbHighDchool(){
+        String[] table_columns = new String[]{AppLpcDBContract.HighSchoolEntry.COLUMN_TITLE,
+                AppLpcDBContract.HighSchoolEntry.COLUMN_DATE,
+                AppLpcDBContract.HighSchoolEntry.COLUMN_CONTENT
+        };
+        String[] testValues = new String[]{"Test news 1 lycee",
+                "01/01/2004",
+                "Test de ma news 1 lycee !"};
+
+        testInsertReadDB(AppLpcDBContract.HighSchoolEntry.TABLE_NAME, table_columns, testValues);
+    }
+
+    /////////////// CVL //////////////////
+    public void testInsertReadDbCVL(){
+        String[] table_columns = new String[]{AppLpcDBContract.CVLEntry.COLUMN_TITLE,
+                AppLpcDBContract.CVLEntry.COLUMN_DATE,
+                AppLpcDBContract.CVLEntry.COLUMN_CONTENT
+        };
+        String[] testValues = new String[]{"Test news 1 cvl",
+                "01/01/2011",
+                "Test de ma news 1 cvl!"};
+
+        testInsertReadDB(AppLpcDBContract.CVLEntry.TABLE_NAME, table_columns, testValues);
+    }
+
+    /////////////// CDI //////////////////
+    public void testInsertReadDbCDI(){
+        String[] table_columns = new String[]{AppLpcDBContract.CDIEntry.COLUMN_TITLE,
+                AppLpcDBContract.CDIEntry.COLUMN_DATE,
+                AppLpcDBContract.CDIEntry.COLUMN_CONTENT
+        };
+        String[] testValues = new String[]{"Test news 1 cdi",
+                "01/01/2401",
+                "Test de ma news 1 cdi!"};
+
+        testInsertReadDB(AppLpcDBContract.CDIEntry.TABLE_NAME, table_columns, testValues);
+    }
+
+    // Test
+    public void testInsertReadDB(String table_name, String[] table_columns, String[] testValues){
         SQLiteDatabase db = new AppLpcDBHelper(this.mContext)
                 .getWritableDatabase();
         assertEquals(true, db.isOpen());
 
-        /////////////// PARENTS //////////////////
-        String testTitle = "Test news 1";
-        String testDate = "01/01/2001";
-        String testContent = "Test de ma news 1 !";
-
         ContentValues contentValues = new ContentValues();
-        contentValues.put(AppLpcDBContract.ParentsEntry.COLUMN_TITLE, testTitle);
-        contentValues.put(AppLpcDBContract.ParentsEntry.COLUMN_DATE, testDate);
-        contentValues.put(AppLpcDBContract.ParentsEntry.COLUMN_CONTENT, testContent);
+        for(int i=0; i<table_columns.length; i++) {
+            contentValues.put(table_columns[i], testValues[i]);
+        }
 
-        long parentsRowId;
-        parentsRowId = db.insert(AppLpcDBContract.ParentsEntry.TABLE_NAME,
+        long contentRowId;
+        contentRowId = db.insert(table_name,
                 null, contentValues);
 
-        assertTrue(parentsRowId != -1);
+        assertTrue(contentRowId != -1);
 
-        String[] columnsToRead = {
-                AppLpcDBContract.ParentsEntry.COLUMN_TITLE,
-                AppLpcDBContract.ParentsEntry.COLUMN_DATE,
-                AppLpcDBContract.ParentsEntry.COLUMN_CONTENT
-        };
-
-        Cursor cursor = db.query(AppLpcDBContract.ParentsEntry.TABLE_NAME,//table name to query
-                columnsToRead,
+        Cursor cursor = db.query(table_name,//table name to query
+                table_columns,
                 null,//columns for the where clause
                 null,//values for the where clause
                 null,//columns to group by
@@ -67,79 +129,10 @@ public class TestDb extends AndroidTestCase {
         );
 
         if(cursor.moveToFirst()){
-            String title = cursor.getString(
-                    cursor.getColumnIndex(AppLpcDBContract.ParentsEntry.COLUMN_TITLE));
-            String date = cursor.getString(
-                    cursor.getColumnIndex(AppLpcDBContract.ParentsEntry.COLUMN_DATE));
-            String content = cursor.getString(
-                    cursor.getColumnIndex(AppLpcDBContract.ParentsEntry.COLUMN_CONTENT));
-            assertEquals(title,testTitle);
-            assertEquals(date,testDate);
-            assertEquals(content,testContent);
-
-            cursor.close();
-        }else{
-            fail("No value returned ");
-        }
-
-        /////////////// STUDENTS //////////////////
-        String testClass = "Terminale STI2D SIN";
-        String testMonday = "8h-12h: SIN \n 13h-17h : TRANSVERSAL";
-        String testTuesday = "8h-12h: MATHS \n 13h-17h : TRANSVERSAL";
-        String testWednesday = "8h-12h: SIN \n 13h-17h : MATHS";
-        String testThursday = "8h-12h: PYSIQUE \n 13h-17h : TRANSVERSAL";
-        String testFriday = "8h-12h: SIN \n 13h-17h : PHYSIQUE";
-
-        ContentValues contentValuesStudents = new ContentValues();
-        contentValuesStudents.put(AppLpcDBContract.StudentsEntry.COLUMN_CLASS, testClass);
-        contentValuesStudents.put(AppLpcDBContract.StudentsEntry.COLUMN_MONDAY, testMonday);
-        contentValuesStudents.put(AppLpcDBContract.StudentsEntry.COLUMN_TUESDAY, testTuesday);
-        contentValuesStudents.put(AppLpcDBContract.StudentsEntry.COLUMN_WEDNESDAY, testWednesday);
-        contentValuesStudents.put(AppLpcDBContract.StudentsEntry.COLUMN_THURSDAY, testThursday);
-        contentValuesStudents.put(AppLpcDBContract.StudentsEntry.COLUMN_FRIDAY, testFriday);
-
-        long studentsRowId;
-        studentsRowId = db.insert(AppLpcDBContract.StudentsEntry.TABLE_NAME,
-                null, contentValuesStudents);
-
-        assertTrue(studentsRowId != -1);
-
-        String[] studentsColumnsToRead = {AppLpcDBContract.StudentsEntry.COLUMN_CLASS,
-                AppLpcDBContract.StudentsEntry.COLUMN_MONDAY,
-                AppLpcDBContract.StudentsEntry.COLUMN_TUESDAY,
-                AppLpcDBContract.StudentsEntry.COLUMN_WEDNESDAY,
-                AppLpcDBContract.StudentsEntry.COLUMN_THURSDAY,
-                AppLpcDBContract.StudentsEntry.COLUMN_FRIDAY
-        };
-
-        Cursor studentsCursor = db.query(AppLpcDBContract.StudentsEntry.TABLE_NAME,//table name to query
-                studentsColumnsToRead,
-                null,//columns for the where clause
-                null,//values for the where clause
-                null,//columns to group by
-                null, //columns to filter by rows group
-                null //sort order
-        );
-
-        if(studentsCursor.moveToFirst()){
-            String studentClass = studentsCursor.getString(
-                    studentsCursor.getColumnIndex(AppLpcDBContract.StudentsEntry.COLUMN_CLASS));
-            String monday = studentsCursor.getString(
-                    studentsCursor.getColumnIndex(AppLpcDBContract.StudentsEntry.COLUMN_MONDAY));
-            String tuesday = studentsCursor.getString(
-                    studentsCursor.getColumnIndex(AppLpcDBContract.StudentsEntry.COLUMN_TUESDAY));
-            String wednesday = studentsCursor.getString(
-                    studentsCursor.getColumnIndex(AppLpcDBContract.StudentsEntry.COLUMN_WEDNESDAY));
-            String thursday = studentsCursor.getString(
-                    studentsCursor.getColumnIndex(AppLpcDBContract.StudentsEntry.COLUMN_THURSDAY));
-            String friday = studentsCursor.getString(
-                    studentsCursor.getColumnIndex(AppLpcDBContract.StudentsEntry.COLUMN_FRIDAY));
-            assertEquals(studentClass,testClass);
-            assertEquals(monday,testMonday);
-            assertEquals(tuesday,testTuesday);
-            assertEquals(wednesday,testWednesday);
-            assertEquals(thursday,testThursday);
-            assertEquals(friday,testFriday);
+            for(int i=0; i<table_columns.length; i++) {
+                assertEquals(cursor.getString(
+                        cursor.getColumnIndex(table_columns[i])), testValues[i]);
+            }
 
             cursor.close();
         }else{
