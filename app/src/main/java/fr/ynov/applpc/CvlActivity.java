@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+
+import fr.ynov.applpc.data.DataCDIProvider;
 
 public class CvlActivity extends ActionBarActivity {
     //Nathan
@@ -14,13 +17,16 @@ public class CvlActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cvl);
 
-        ArrayList<String[]> news = new ArrayList<String[]>();
-        for (int i = 0; i <= 10; i++) {
-
-            news.add(new String[]{"Titre" + i, "text" + i});
-        }
-        CustomAdapter myAdapter = new CustomAdapter(this, news, R.layout.list_item_view, new int[]{R.id.title_list_item, R.id.text_list_item});
+        CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
+                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item});
         ListView listView = (ListView) findViewById(R.id.listview_cvl);
         listView.setAdapter(myAdapter);
+
+        downloadDatas(myAdapter);
+    }
+
+    private void downloadDatas(CustomAdapter customAdapter){
+        DataCDIProvider dataCDIProvider = new DataCDIProvider(this);
+        customAdapter.addAll(Arrays.asList(dataCDIProvider.getDatas()));
     }
 }

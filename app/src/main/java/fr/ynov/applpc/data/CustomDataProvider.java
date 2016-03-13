@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.ConnectivityManager;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,9 +53,9 @@ public abstract class CustomDataProvider {
         for (int i = 0; i < datasJson.length(); i++ ){
             JSONObject parentsInfo = datasJson.getJSONObject(i);
             for(int j=0; j<table_colums.length; j++) {
-                resultStrs[i][j] = parentsInfo.getString(table_colums[i]); // For each element, get the JsonObject with the name of the column in DB
+                resultStrs[i][j] = parentsInfo.getString(table_colums[j]); // For each element, get the JsonObject with the name of the column in DB
             }
-            //Log.d(LOG_TAG + "-TEST", resultStrs[i][0]);
+            //Log.d(LOG_TAG + "-TEST", resultStrs[i][0]+"-"+resultStrs[i][1]);
         }
 
         return resultStrs;
