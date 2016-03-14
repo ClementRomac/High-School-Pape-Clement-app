@@ -69,11 +69,11 @@ public class StudentsActivity extends ActionBarActivity {
         //On refait la manip plusieurs fois avec des données différentes pour former les items de notre ListView
 
         // TODO boucle requete sql récupérer nom de chaque classe
-       // map = new HashMap<String, String>();
-        //map.put("titre", "Excel");
-       // map.put("description", "Tableur");
-       // map.put("img", String.valueOf(R.drawable.excel));
-       // listItem.add(map);
+        map = new HashMap<String, String>();
+       map.put("day", "Mardi");
+        map.put("text", "svt 9h");
+        map.put("ligne", String.valueOf(R.drawable.rouge));
+        listItem.add(map);
 
         //Création d'un SimpleAdapter qui se chargera de mettre les items présent dans notre list (listItem) dans la vue affichageitem
         SimpleAdapter mSchedule = new SimpleAdapter(this.getBaseContext(), listItem, R.layout.model_listview_calendar,

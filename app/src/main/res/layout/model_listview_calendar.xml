@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:padding="10dp"
     >
 
+
     <ImageView
         android:id="@+id/ligne"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
         tools:background="#AAA"
         />
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:id="@+id/trait"
+        android:layout_width="6dp"
+        android:layout_height="wrap_content"
+        android:background="#49C300"
+        android:layout_below="@+id/ligne"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/ligne"
+        android:layout_alignEnd="@+id/ligne"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+
+        android:layout_toStartOf="@id/ligne"
+        tools:background="#49C300"
+    </LinearLayout>
+
 
     <TextView
         android:id="@+id/day"
@@ -31,10 +51,7 @@
         android:textColor="@android:color/black"
         android:layout_alignLeft="@+id/day"
         android:layout_below="@+id/day"
-        tools:text="mon calendrier aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"/>
+        tools:text="mon calendrier "/>
 
 
 </RelativeLayout>
