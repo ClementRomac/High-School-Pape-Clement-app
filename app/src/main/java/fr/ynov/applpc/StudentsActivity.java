@@ -70,7 +70,7 @@ public class StudentsActivity extends ActionBarActivity {
 
         // TODO boucle requete sql récupérer nom de chaque classe
         map = new HashMap<String, String>();
-       map.put("day", "Mardi");
+        map.put("day", "Mardi");
         map.put("text", "svt 9h");
         map.put("ligne", String.valueOf(R.drawable.rouge));
         listItem.add(map);

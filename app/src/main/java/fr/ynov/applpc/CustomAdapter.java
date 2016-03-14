@@ -16,15 +16,17 @@ import java.util.ArrayList;
 public class CustomAdapter extends ArrayAdapter<String[]> {
     private int list_item_view;
     private int[] list_item_views;
+    private int[] list_item_views_colors;
 
-    public CustomAdapter(Context context, ArrayList<String[]> param, int list_item_view, int[] list_item_views) {
+    public CustomAdapter(Context context, ArrayList<String[]> param, int list_item_view, int[] list_item_views, int[] list_item_views_colors) {
         super(context, 0, param);
         this.list_item_view = list_item_view;
         this.list_item_views = list_item_views;
+        this.list_item_views_colors = list_item_views_colors;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent){
         // Get the data item for this position
         String[] content = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
@@ -33,8 +35,11 @@ public class CustomAdapter extends ArrayAdapter<String[]> {
         }
 
         // Fill the TextView
-        for(int i =0; i<list_item_views.length; i++){
+        for(int i=0; i<list_item_views.length; i++){
             ((TextView) convertView.findViewById(list_item_views[i])).setText(content[i]);
+            if(i<list_item_views_colors.length) {
+                ((TextView) convertView.findViewById(list_item_views[i])).setTextColor(list_item_views_colors[i]);
+            }
         }
         // Return the completed view to render on screen
         return convertView;

@@ -22,18 +22,17 @@ public class CvlActivity extends ActionBarActivity {
         setContentView(R.layout.activity_cvl);
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
-                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item});
+                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item},
+                new int[]{this.getResources().getColor(R.color.cvl_color)});
         ListView listView = (ListView) findViewById(R.id.listview_cvl);
         listView.setAdapter(myAdapter);
 
         downloadDatas(myAdapter);
-
-        TextView textView = (TextView) findViewById(R.id.title_list_item);
-        textView.setTextColor(this.getResources().getColor(R.color.cvl_color));
     }
 
     private void downloadDatas(CustomAdapter customAdapter){
         DataCVLProvider dataCVLProvider = new DataCVLProvider(this);
         customAdapter.addAll(Arrays.asList(dataCVLProvider.getDatas()));
     }
+
 }

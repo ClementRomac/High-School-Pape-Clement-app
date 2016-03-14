@@ -21,7 +21,8 @@ public class InfosActivity extends ActionBarActivity {
         setContentView(R.layout.activity_infos);
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
-                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item});
+                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item},
+                new int[]{this.getResources().getColor(R.color.infos_color)});
         ListView listView = (ListView) findViewById(R.id.listview_infos);
         listView.setAdapter(myAdapter);
 

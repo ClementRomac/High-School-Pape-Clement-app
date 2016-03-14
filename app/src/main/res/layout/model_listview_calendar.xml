@@ -26,10 +26,10 @@
         android:layout_alignRight="@+id/ligne"
         android:layout_alignEnd="@+id/ligne"
         android:paddingLeft="2dp"
-        android:paddingRight="2dp">
+        android:paddingRight="2dp"
 
         android:layout_toStartOf="@id/ligne"
-        tools:background="#49C300"
+        tools:background="#49C300">
     </LinearLayout>
 
 
