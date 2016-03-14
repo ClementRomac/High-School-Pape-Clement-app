@@ -16,9 +16,8 @@ public class CvlActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Le C.V.L");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cvl_color)));
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cvl_fleche_retour);
+
+        setCustomActionBar();
         setContentView(R.layout.activity_cvl);
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
@@ -33,6 +32,13 @@ public class CvlActivity extends ActionBarActivity {
     private void downloadDatas(CustomAdapter customAdapter){
         DataCVLProvider dataCVLProvider = new DataCVLProvider(this);
         customAdapter.addAll(Arrays.asList(dataCVLProvider.getDatas()));
+    }
+
+    private void setCustomActionBar(){
+        getSupportActionBar().setTitle("Le CVL");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cvl_color)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cvl_fleche_retour);
+        getSupportActionBar().setElevation(0);
     }
 
 }

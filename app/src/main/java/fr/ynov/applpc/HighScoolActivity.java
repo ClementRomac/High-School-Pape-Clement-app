@@ -12,9 +12,8 @@ public class HighScoolActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Lycée");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.accueil_bck_lycee)));
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.high_school_fleche_retour);
+
+        setCustomActionBar();
         setContentView(R.layout.activity_high_scool);
         //Temporaire
         final Button buttonCdi = (Button) findViewById(R.id.CDI);
@@ -45,6 +44,13 @@ public class HighScoolActivity extends ActionBarActivity {
             }
         });
         //Fin temporaire
+    }
+
+    private void setCustomActionBar(){
+        getSupportActionBar().setTitle("Lycée");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.accueil_bck_lycee)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.high_school_fleche_retour);
+        getSupportActionBar().setElevation(0);
     }
 
     public void redirectCDI() {

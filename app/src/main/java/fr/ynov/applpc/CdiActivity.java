@@ -3,6 +3,7 @@ package fr.ynov.applpc;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,14 +17,11 @@ public class CdiActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().setTitle("Le CDI");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cdi_color)));
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_fleche_retour);
+        setCustomActionBar();
         setContentView(R.layout.activity_cdi);
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
-                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item},
-                new int[]{this.getResources().getColor(R.color.cdi_color)});
+                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item}, new int[]{this.getResources().getColor(R.color.cdi_color)});
         ListView listView = (ListView) findViewById(R.id.listview_cdi);
         listView.setAdapter(myAdapter);
 
@@ -33,5 +31,12 @@ public class CdiActivity extends ActionBarActivity {
     private void downloadDatas(CustomAdapter customAdapter){
         DataCDIProvider dataCDIProvider = new DataCDIProvider(this);
         customAdapter.addAll(Arrays.asList(dataCDIProvider.getDatas()));
+    }
+
+    private void setCustomActionBar(){
+        getSupportActionBar().setTitle("Le CDI");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cdi_color)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_fleche_retour);
+        getSupportActionBar().setElevation(0);
     }
 }

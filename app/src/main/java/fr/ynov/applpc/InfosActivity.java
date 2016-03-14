@@ -15,9 +15,8 @@ public class InfosActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Les informations");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.infos_color)));
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.infos_fleche_retour);
+
+        setCustomActionBar();
         setContentView(R.layout.activity_infos);
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
@@ -32,5 +31,12 @@ public class InfosActivity extends ActionBarActivity {
     private void downloadDatas(CustomAdapter customAdapter){
         DataHighSchoolProvider dataHighSchoolProvider = new DataHighSchoolProvider(this);
         customAdapter.addAll(Arrays.asList(dataHighSchoolProvider.getDatas()));
+    }
+
+    private void setCustomActionBar(){
+        getSupportActionBar().setTitle("Les Informations");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.infos_color)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.infos_fleche_retour);
+        getSupportActionBar().setElevation(0);
     }
 }
