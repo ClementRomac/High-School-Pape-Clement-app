@@ -1,20 +1,24 @@
 package fr.ynov.applpc;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import fr.ynov.applpc.data.DataCDIProvider;
+import fr.ynov.applpc.data.DataCVLProvider;
 
 public class CvlActivity extends ActionBarActivity {
     //Nathan
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Le C.V.L");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cvl_color)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cvl_fleche_retour);
         setContentView(R.layout.activity_cvl);
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
@@ -23,10 +27,13 @@ public class CvlActivity extends ActionBarActivity {
         listView.setAdapter(myAdapter);
 
         downloadDatas(myAdapter);
+
+        TextView textView = (TextView) findViewById(R.id.title_list_item);
+        textView.setTextColor(this.getResources().getColor(R.color.cvl_color));
     }
 
     private void downloadDatas(CustomAdapter customAdapter){
-        DataCDIProvider dataCDIProvider = new DataCDIProvider(this);
-        customAdapter.addAll(Arrays.asList(dataCDIProvider.getDatas()));
+        DataCVLProvider dataCVLProvider = new DataCVLProvider(this);
+        customAdapter.addAll(Arrays.asList(dataCVLProvider.getDatas()));
     }
 }

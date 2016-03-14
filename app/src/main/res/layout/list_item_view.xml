@@ -4,14 +4,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="100dp">
+    android:paddingLeft="20dp">
 
     <TextView
         android:id="@+id/title_list_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
         android:textStyle="bold"
+        android:textSize="25dp"
         tools:text="Titre"
         />
 
@@ -20,7 +20,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:textStyle="bold"
         tools:text="Date"
         />
 
@@ -29,7 +28,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
         tools:text="Texte"
         />
+
+
 
 </LinearLayout>

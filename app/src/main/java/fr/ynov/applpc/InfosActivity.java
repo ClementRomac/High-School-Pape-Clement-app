@@ -1,14 +1,13 @@
 package fr.ynov.applpc;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import fr.ynov.applpc.data.DataCDIProvider;
 import fr.ynov.applpc.data.DataHighSchoolProvider;
 
 public class InfosActivity extends ActionBarActivity {
@@ -16,6 +15,9 @@ public class InfosActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Les informations");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.infos_color)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.infos_fleche_retour);
         setContentView(R.layout.activity_infos);
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
@@ -27,7 +29,7 @@ public class InfosActivity extends ActionBarActivity {
     }
 
     private void downloadDatas(CustomAdapter customAdapter){
-        DataCDIProvider dataCDIProvider = new DataCDIProvider(this);
-        customAdapter.addAll(Arrays.asList(dataCDIProvider.getDatas()));
+        DataHighSchoolProvider dataHighSchoolProvider = new DataHighSchoolProvider(this);
+        customAdapter.addAll(Arrays.asList(dataHighSchoolProvider.getDatas()));
     }
 }

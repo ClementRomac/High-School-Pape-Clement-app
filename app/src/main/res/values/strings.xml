@@ -9,4 +9,7 @@
     `<string name="accueil_h2_parent">Section destinée aux parents.</string>
     `<string name="parent_header">Parents</string>
     <string name="parent_header_sc">Activité</string>
+    <string name="cdi_header_sc">Actualité</string>
+    <string name="cvl_header_sc">Actualité</string>
+    <string name="infos_header_sc">Actualité</string>
 </resources>

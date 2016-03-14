@@ -11,6 +11,10 @@
     <color name="accueil_bck_parent_trans">#99EE3560</color>
     <color name="main_font">#ffffff</color>
     <color name="parent_header_sc">#1D1D1B</color>
-    <color name="parent_bck_actu">#EBEBEB</color>
+
+    <color name="list_bck">#EBEBEB</color>
+    <color name="cdi_color">#49C300</color>
+    <color name="cvl_color">#ff8400</color>
+    <color name="infos_color">#414042</color>
 
 </resources>

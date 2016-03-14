@@ -1,23 +1,24 @@
 package fr.ynov.applpc;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import fr.ynov.applpc.data.CustomDataProvider;
 import fr.ynov.applpc.data.DataCDIProvider;
-import fr.ynov.applpc.data.DataHighSchoolProvider;
 
 public class CdiActivity extends ActionBarActivity {
     //Nathan
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar().setTitle("Le CDI");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cdi_color)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_fleche_retour);
         setContentView(R.layout.activity_cdi);
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
