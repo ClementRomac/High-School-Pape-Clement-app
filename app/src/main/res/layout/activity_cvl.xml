@@ -38,7 +38,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/parent_header_sc"
+                android:background="@drawable/bck_radius"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp">
 
