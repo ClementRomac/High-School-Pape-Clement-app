@@ -4,15 +4,23 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import fr.ynov.applpc.data.DataCDIProvider;
+import fr.ynov.applpc.data.DataStudentsProvider;
 
 public class StudentsActivity extends ActionBarActivity {
 //Pierre
@@ -21,67 +29,67 @@ public class StudentsActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_students);
 
+        ////////////////////////Partie Spinner/////////////////////
         Spinner spinner;
         //http://marclabs.com/comment-configurer-spinner-liste-deroulante-sur-android
         //Récupération du Spinner déclaré dans le fichier activity_students.xml de res/layout
         spinner = (Spinner) findViewById(R.id.spinnerClass);
         //Création d'une liste d'élément à mettre dans le Spinner(pour l'exemple)
         List listClasses = new ArrayList();
-        listClasses.add("Seconde A");
-        listClasses.add("Seconde B");
-        listClasses.add("Première A");
-        listClasses.add("Première B");
-        listClasses.add("Terminale A");
-        listClasses.add("Terminale B");
-        // TODO boucle requete sql récupérer nom de chaque classe
-        /*Le Spinner a besoin d'un adapter pour sa presentation alors on lui passe le context(this) et
-        un fichier de presentation par défaut( android.R.layout.simple_spinner_item)
-        Avec la liste des elements (exemple) */
-        ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item,listClasses);
-        /* On definit une présentation du spinner quand il est déroulé         (android.R.layout.simple_spinner_dropdown_item) */
+        downloadClasses(listClasses);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, listClasses);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //Enfin on passe l'adapter au Spinner et c'est tout
         spinner.setAdapter(adapter);
         spinner.setSelection(0);//default value
 
 
+        ////////////////////////Partie Calendar/////////////////////
 
-        //Récupération de la listview créée dans le fichier main.xml
-        ListView maListViewPerso = (ListView) findViewById(R.id.listviewCalendar);
 
-        //Création de la ArrayList qui nous permettra de remplire la listView
-        ArrayList<HashMap<String, String>> listItem = new ArrayList<HashMap<String, String>>();
+        String studentClasses = spinner.getSelectedItem().toString();
+        ;
+        String[][] Calendar = downloadCalendar(studentClasses);
+        WriteCalendar(Calendar);
 
-        //On déclare la HashMap qui contiendra les informations pour un item
-        HashMap<String, String> map;
+        // Creating adapter for spinner
 
-        //Création d'une HashMap pour insérer les informations du premier item de notre listView
-        map = new HashMap<String, String>();
-        //on insère un élément titre que l'on récupérera dans le textView titre créé dans le fichier affichageitem.xml
-        map.put("day", "Lundi");
-        //on insère un élément description que l'on récupérera dans le textView description créé dans le fichier affichageitem.xml
-        map.put("text", "Math 8h ");
-        //on insère la référence à l'image (convertit en String car normalement c'est un int) que l'on récupérera dans l'imageView créé dans le fichier affichageitem.xml
-        map.put("ligne", String.valueOf(R.drawable.vert));
-        //enfin on ajoute cette hashMap dans la arrayList
-        listItem.add(map);
 
-        //On refait la manip plusieurs fois avec des données différentes pour former les items de notre ListView
+        // Drop down layout style - list view with radio button
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        // TODO boucle requete sql récupérer nom de chaque classe
-        map = new HashMap<String, String>();
-       map.put("day", "Mardi");
-        map.put("text", "svt 9h");
-        map.put("ligne", String.valueOf(R.drawable.rouge));
-        listItem.add(map);
+        // attaching data adapter to spinner
+        spinner.setAdapter(adapter);
+    }
 
-        //Création d'un SimpleAdapter qui se chargera de mettre les items présent dans notre list (listItem) dans la vue affichageitem
-        SimpleAdapter mSchedule = new SimpleAdapter(this.getBaseContext(), listItem, R.layout.model_listview_calendar,
-                new String[] {"ligne", "day", "text"}, new int[] {R.id.ligne, R.id.day, R.id.text});
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            // On selecting a spinner item
+            String item = parent.getItemAtPosition(position).toString();
 
-        //On attribut à notre listView l'adapter que l'on vient de créer
-        maListViewPerso.setAdapter(mSchedule);
+        String studentClasses=item;
+        String[][] Calendar  =downloadCalendar(studentClasses);
+        WriteCalendar(Calendar);
 
-        //http://tutos-android-france.com/listview-afficher-une-liste-delements/
+        }
+    private void WriteCalendar( String[][] studentClasses){
+        final TextView textLundi = (TextView) findViewById(R.id.textLundi);
+        final TextView textMardi = (TextView) findViewById(R.id.textMardi);
+        final TextView textMercredi = (TextView) findViewById(R.id.textMercredi);
+        final TextView textJeudi = (TextView) findViewById(R.id.textJeudi);
+        final TextView textVendredi = (TextView) findViewById(R.id.textVendredi);
+
+        textLundi.setText(studentClasses[0][0]);
+        textMardi.setText(studentClasses[0][1]);
+        textMercredi.setText(studentClasses[0][2]);
+        textJeudi.setText(studentClasses[0][3]);
+        textVendredi.setText(studentClasses[0][4]);
+    }
+    private void downloadClasses(List listClasses){
+        DataStudentsProvider DataStudentsProvider = new DataStudentsProvider(this);
+        listClasses.addAll(Arrays.asList(DataStudentsProvider.getClasses()));
+    }
+    private String[][] downloadCalendar(String studentClasses){
+        DataStudentsProvider DataStudentsProvider = new DataStudentsProvider(this);
+        return DataStudentsProvider.getScheduleByClass(studentClasses);
     }
 }

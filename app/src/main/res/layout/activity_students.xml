@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +14,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="fr.ynov.applpc.StudentsActivity"
     android:orientation="vertical"
-    android:background="#C9CCCC">
+    android:weightSum="1">
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,11 +42,273 @@
         android:layout_marginLeft="30dp"
         style="@style/Base.TextAppearance.AppCompat.Title"/>
         <!--android:background="@drawable/SpinnerCorner" -->
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:padding="10dp"
+            android:layout_weight="0.27">
+        <ImageView
+            android:id="@+id/vert"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/vert"
+            />
 
-    <ListView
-        android:id="@+id/listviewCalendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp" />
+            <TextView
+                android:id="@+id/Lundi"
+                android:layout_width="wrap_content"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:text="Lundi"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/vert"
+                android:layout_toEndOf="@+id/vert"
+                android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:id="@+id/traitVert"
+            android:layout_width="3dp"
+            android:layout_height="290dp"
+            android:background="@drawable/verttrait"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_below="@+id/vert"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="6dp">
+            tools:background="#49C300"
+        </LinearLayout>
+            <TextView
+                android:id="@+id/textLundi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                tools:text="mon calendrier "
+                android:layout_below="@+id/Lundi"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="35dp"
+                android:text="test" /> />
+    </RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:layout_weight="0.27">
+        <ImageView
+            android:id="@+id/orange"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/orange"
+            />
+
+        <TextView
+            android:id="@+id/Mardi"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/orange"
+            android:layout_toEndOf="@+id/orange"
+            android:layout_marginLeft="10dp"
+            android:text="Mardi" />
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:id="@+id/traitOrange"
+            android:layout_width="3dp"
+            android:layout_height="290dp"
+            android:background="@drawable/orangetrait"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_below="@+id/orange"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="6dp">
+            tools:background="#49C300"
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textMardi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="mon calendrier "
+            android:layout_below="@+id/Mardi"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="35dp"
+            android:text="test" />
+    </RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:layout_weight="0.27">
+        <ImageView
+            android:id="@+id/bleu"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/bleu"
+            />
+
+        <TextView
+            android:id="@+id/Mercredi"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/bleu"
+            android:layout_toEndOf="@+id/bleu"
+            android:layout_marginLeft="10dp"
+            android:text="Mercredi" />
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:id="@+id/traitbleu"
+            android:layout_width="3dp"
+            android:layout_height="290dp"
+            android:background="@drawable/bleutrait"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_below="@+id/bleu"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="6dp">
+            tools:background="#49C300"
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textMercredi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="mon calendrier "
+            android:layout_below="@+id/Mercredi"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="35dp"
+            android:text="test" />/>
+    </RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:layout_weight="0.27">
+        <ImageView
+            android:id="@+id/rouge"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/rouge"
+            />
+
+        <TextView
+            android:id="@+id/Jeudi"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/rouge"
+            android:layout_toEndOf="@+id/rouge"
+            android:layout_marginLeft="10dp"
+            android:text="Jeudi" />
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:id="@+id/traitrouge"
+            android:layout_width="3dp"
+            android:layout_height="290dp"
+            android:background="@drawable/rougetrait"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_below="@+id/rouge"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="6dp">
+            tools:background="#49C300"
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textJeudi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="mon calendrier "
+            android:layout_below="@+id/Jeudi"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="35dp"
+            android:text="test" /> />
+    </RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:layout_weight="0.27">
+        <ImageView
+            android:id="@+id/jaune"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/jaune"
+            />
+
+        <TextView
+            android:id="@+id/Vendredi"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/jaune"
+            android:layout_toEndOf="@+id/jaune"
+            android:layout_marginLeft="10dp"
+            android:text="Vendredi" />
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:id="@+id/traitjaune"
+            android:layout_width="3dp"
+            android:layout_height="290dp"
+            android:background="@drawable/jaunetrait"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:layout_below="@+id/jaune"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="6dp">
+            tools:background="#49C300"
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textVendredi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="mon calendrier "
+            android:layout_below="@+id/Vendredi"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="35dp"
+            android:text="test" />/>
+    </RelativeLayout>
+
 
 </LinearLayout>
+
+    </ScrollView>

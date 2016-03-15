@@ -41,7 +41,7 @@ public class DataStudentsProvider extends CustomDataProvider{
             callAPI(); //if User has internet connection => call Api and put datas in DB
         }
         else{
-            Toast.makeText(context, "Vous n'êtes pas connecté à Internet, vos données ne sont donc pas actualisée.", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Vous n'êtes pas connecté à Internet, vos données ne sont donc pas actualisées.", Toast.LENGTH_LONG).show();
         }
 
         String[] classes = readClasses(); // get datas from DB
