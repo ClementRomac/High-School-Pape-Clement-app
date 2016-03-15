@@ -3,7 +3,6 @@ package fr.ynov.applpc;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -34,7 +33,7 @@ public class CdiActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle("Le CDI");
+        getSupportActionBar().setTitle("Le C.D.I");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cdi_color)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_fleche_retour);
         getSupportActionBar().setElevation(0);

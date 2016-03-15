@@ -4,7 +4,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,7 +34,7 @@ public class CvlActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle("Le CVL");
+        getSupportActionBar().setTitle("Le C.V.L");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cvl_color)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.cvl_fleche_retour);
         getSupportActionBar().setElevation(0);
