@@ -20,7 +20,7 @@ public class CdiActivity extends ActionBarActivity {
         setContentView(R.layout.activity_cdi);
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
-                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item}, new int[]{this.getResources().getColor(R.color.cdi_color)});
+                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item}, new int[]{this.getResources().getColor(R.color.cdi_primary)});
         ListView listView = (ListView) findViewById(R.id.listview_cdi);
         listView.setAdapter(myAdapter);
 
@@ -33,8 +33,8 @@ public class CdiActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle("Le C.D.I");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cdi_color)));
+        getSupportActionBar().setTitle(R.string.accueil_h1_cdi);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cdi_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_fleche_retour);
         getSupportActionBar().setElevation(0);
     }

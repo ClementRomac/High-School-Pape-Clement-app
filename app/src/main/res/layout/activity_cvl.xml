@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -7,15 +7,23 @@
     android:paddingLeft="4dp"
     android:paddingTop="0dp"
     android:paddingRight="4dp"
-    android:paddingBottom="4dp"
+    android:paddingBottom="20dp"
     tools:context="fr.ynov.applpc.CvlActivity"
-    android:background="@color/cvl_color">
+    android:background="@color/cvl_primary">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/cvl_secondary"
+        android:layout_alignParentTop="true"
+        android:id="@+id/cvl_header"/>
 
     <LinearLayout
+        android:layout_below="@+id/cvl_header"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/main_font"
+        android:background="@color/background"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp">
@@ -64,4 +72,10 @@
 
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/cvl_secondary"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

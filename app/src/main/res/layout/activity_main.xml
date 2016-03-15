@@ -101,7 +101,7 @@
                     android:singleLine="true"
                     android:text="@string/accueil_h1_lycee"
                     android:paddingLeft="20dp"
-                    android:background="@color/accueil_bck_lycee"
+                    android:background="@color/high_school_primary"
                     android:elegantTextHeight="false"
                     android:gravity="center_vertical" />
 
@@ -149,7 +149,7 @@
                     android:textColor="@color/main_font"
                     android:paddingLeft="20dp"
                     android:layout_gravity="center"
-                    android:background="@color/accueil_bck_eleve"
+                    android:background="@color/students_primary"
                     android:gravity="center_vertical" />
 
                 <TextView
@@ -195,7 +195,7 @@
                     android:textColor="@color/main_font"
                     android:paddingLeft="20dp"
                     android:layout_gravity="center"
-                    android:background="@color/accueil_bck_parent"
+                    android:background="@color/parents_primary"
                     android:gravity="center_vertical" />
 
                 <TextView

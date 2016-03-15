@@ -12,4 +12,7 @@
     <string name="cdi_header_sc">Actualité</string>
     <string name="cvl_header_sc">Actualité</string>
     <string name="infos_header_sc">Actualité</string>
+    <string name="accueil_h1_cdi">Le CDI</string>
+    <string name="accueil_h1_cvl">Le CVL</string>
+    <string name="accueil_h1_infos">Les Informations</string>
 </resources>

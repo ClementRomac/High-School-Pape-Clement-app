@@ -21,7 +21,7 @@ public class CvlActivity extends ActionBarActivity {
 
         CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
                 new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item},
-                new int[]{this.getResources().getColor(R.color.cvl_color)});
+                new int[]{this.getResources().getColor(R.color.cvl_primary)});
         ListView listView = (ListView) findViewById(R.id.listview_cvl);
         listView.setAdapter(myAdapter);
 
@@ -34,8 +34,8 @@ public class CvlActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle("Le C.V.L");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cvl_color)));
+        getSupportActionBar().setTitle(R.string.accueil_h1_cvl);
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cvl_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.cvl_fleche_retour);
         getSupportActionBar().setElevation(0);
     }

@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#ffffff</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="accueil_bck_lycee">#46C6E7</color>
-    <color name="accueil_bck_eleve">#C2BC33</color>
-    <color name="accueil_bck_parent">#EE3660</color>
+
+    <!-- Background + font -->
+    <color name="background">#FAFAFA</color>
+    <color name="main_font">#ffffff</color>
+
+    <!-- Color primary -->
+    <color name="high_school_primary">#46C6E7</color>
+    <color name="students_primary">#C2BC33</color>
+    <color name="parents_primary">#EE3660</color>
+    <color name="cdi_primary">#49C300</color>
+    <color name="cvl_primary">#ff8400</color>
+    <color name="infos_primary">#414042</color>
+
+    <!-- Color secondary -->
+    <color name="high_school_secondary">#297F94</color>
+    <color name="students_secondary">#6E6907</color>
+    <color name="parents_secondary">#AA2846</color>
+    <color name="cdi_secondary">#307F00</color>
+    <color name="cvl_secondary">#A65600</color>
+    <color name="infos_secondary">#2A2A2B</color>
+
     <color name="accueil_bck_lycee_trans">#9946C6E7</color>
     <color name="accueil_bck_eleve_trans">#99C2BC33</color>
     <color name="accueil_bck_parent_trans">#99EE3560</color>
-    <color name="main_font">#ffffff</color>
     <color name="parent_header_sc">#1D1D1B</color>
 
     <color name="list_bck">#EBEBEB</color>
-    <color name="cdi_color">#49C300</color>
-    <color name="cvl_color">#ff8400</color>
-    <color name="infos_color">#414042</color>
 
 </resources>
