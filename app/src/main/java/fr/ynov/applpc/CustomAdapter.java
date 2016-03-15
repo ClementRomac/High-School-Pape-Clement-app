@@ -43,6 +43,10 @@ public class CustomAdapter {
                 }
             }
 
+            if(i == params.size() - 1){
+                ((LinearLayout)item_view).removeView(item_view.findViewById(R.id.list_layer)); // If it's the last item remove the bottom layer
+            }
+
             list_view.addView(item_view);//Add the view in the Layout
         }
     }

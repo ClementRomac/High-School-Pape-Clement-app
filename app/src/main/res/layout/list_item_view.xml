@@ -37,7 +37,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/list_layer" />
+        android:background="@color/list_layer"
+        android:id="@+id/list_layer"
+        android:orientation="vertical" />
 
 
 
