@@ -74,23 +74,18 @@
             android:id="@+id/accueil_rl_lycee">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/accueil_lycee"
                 android:src="@drawable/lycee"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="false" />
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"/>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="34dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentTop="false"
-                android:layout_alignWithParentIfMissing="false"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentLeft="false">
+                android:layout_alignParentBottom="true">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -100,7 +95,7 @@
                     android:textColor="@color/main_font"
                     android:singleLine="true"
                     android:text="@string/accueil_h1_lycee"
-                    android:paddingLeft="20dp"
+                    android:textAlignment="center"
                     android:background="@color/high_school_primary"
                     android:elegantTextHeight="false"
                     android:gravity="center_vertical" />
@@ -113,9 +108,9 @@
                     android:textColor="@color/main_font"
                     android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:paddingLeft="10dp"
                     android:background="@color/accueil_bck_lycee_trans"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp" />
+                    android:gravity="center_vertical" />
             </LinearLayout>
 
         </RelativeLayout>
@@ -128,11 +123,12 @@
             android:id="@+id/accueil_rl_eleve">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/accueil_eleve"
                 android:src="@drawable/eleve"
-                android:layout_alignParentRight="false" />
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"/>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -147,7 +143,7 @@
                     android:id="@+id/accueil_h1_eleve"
                     android:layout_weight="2"
                     android:textColor="@color/main_font"
-                    android:paddingLeft="20dp"
+                    android:textAlignment="center"
                     android:layout_gravity="center"
                     android:background="@color/students_primary"
                     android:gravity="center_vertical" />
@@ -160,9 +156,9 @@
                     android:textColor="@color/main_font"
                     android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:paddingLeft="10dp"
                     android:background="@color/accueil_bck_eleve_trans"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp" />
+                    android:gravity="center_vertical"/>
             </LinearLayout>
 
         </RelativeLayout>
@@ -175,10 +171,12 @@
             android:id="@+id/accueil_rl_parent">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/accueil_parent"
-                android:src="@drawable/parents" />
+                android:src="@drawable/parents"
+                android:layout_alignParentBottom="true"
+                android:adjustViewBounds="true"/>
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -193,7 +191,7 @@
                     android:id="@+id/accueil_h1_parent"
                     android:layout_weight="2"
                     android:textColor="@color/main_font"
-                    android:paddingLeft="20dp"
+                    android:textAlignment="center"
                     android:layout_gravity="center"
                     android:background="@color/parents_primary"
                     android:gravity="center_vertical" />
@@ -206,9 +204,9 @@
                     android:textColor="@color/main_font"
                     android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:paddingLeft="10dp"
                     android:background="@color/accueil_bck_parent_trans"
-                    android:gravity="center_vertical"
-                    android:paddingLeft="10dp" />
+                    android:gravity="center_vertical"/>
             </LinearLayout>
 
         </RelativeLayout>
