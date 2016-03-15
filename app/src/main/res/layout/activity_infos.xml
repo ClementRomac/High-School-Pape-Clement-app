@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -7,16 +7,24 @@
     android:paddingLeft="4dp"
     android:paddingTop="0dp"
     android:paddingRight="4dp"
-    android:paddingBottom="4dp"
+    android:paddingBottom="20dp"
     tools:context="fr.ynov.applpc.InfosActivity"
-    android:background="@color/infos_color">
+    android:background="@color/infos_primary">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/infos_secondary"
+        android:layout_alignParentTop="true"
+        android:id="@+id/infos_header"/>
 
     <LinearLayout
+        android:layout_below="@+id/infos_header"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
-        android:background="@color/main_font"
+        android:background="@color/background"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:paddingTop="20dp">
@@ -65,4 +73,10 @@
 
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/cvl_secondary"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
