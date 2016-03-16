@@ -60,10 +60,10 @@ public class HighScoolActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Lycée");
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.accueil_bck_lycee)));
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.high_school_fleche_retour);
+
+        setCustomActionBar();
         setContentView(R.layout.activity_high_scool);
+<<<<<<< HEAD
 
         cdi = (RelativeLayout) findViewById(R.id.relative_CDI);
         cvl = (RelativeLayout) findViewById(R.id.relative_CVL);
@@ -104,6 +104,45 @@ public class HighScoolActivity extends ActionBarActivity {
 
 
 
+=======
+        //Temporaire
+        final Button buttonCdi = (Button) findViewById(R.id.CDI);
+        buttonCdi.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HighScoolActivity.this, CdiActivity.class);
+                startActivity(intent);
+            }
+        });
+        final Button buttonCvl = (Button) findViewById(R.id.CVL);
+        buttonCvl.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HighScoolActivity.this, CvlActivity.class);
+                startActivity(intent);
+            }
+        });
+        final Button buttonInfos = (Button) findViewById(R.id.Infos);
+        buttonInfos.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HighScoolActivity.this, InfosActivity.class);
+                startActivity(intent);
+            }
+        });
+        //Fin temporaire
+    }
+
+    private void setCustomActionBar(){
+        getSupportActionBar().setTitle("Lycée");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.high_school_primary)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.high_school_fleche_retour);
+        getSupportActionBar().setElevation(0);
+    }
+>>>>>>> a33683127c35dbf545dab28e20408f7aa2f0aa5e
 
     public void redirectCDI() {
         //  Intent i = new Intent(this, YourOtherActivity.class);

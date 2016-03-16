@@ -58,9 +58,18 @@ public class StudentsActivity extends ActionBarActivity {
         // Drop down layout style - list view with radio button
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+<<<<<<< HEAD
         // attaching data adapter to spinner
         spinner.setAdapter(adapter);
     }
+=======
+        // TODO boucle requete sql récupérer nom de chaque classe
+        map = new HashMap<String, String>();
+        map.put("day", "Mardi");
+        map.put("text", "svt 9h");
+        map.put("ligne", String.valueOf(R.drawable.rouge));
+        listItem.add(map);
+>>>>>>> a33683127c35dbf545dab28e20408f7aa2f0aa5e
 
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             // On selecting a spinner item

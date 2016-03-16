@@ -3,7 +3,7 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/parent_bck_actu"
+                    android:background="@color/list_bck"
                     android:paddingTop="15dp"
                     android:paddingLeft="10dp">
 
@@ -13,7 +13,7 @@
     android:textAppearance="?android:attr/textAppearanceMedium"
     android:text="Titre"
     android:id="@+id/news_title"
-    android:textColor="@color/accueil_bck_parent" />
+    android:textColor="@color/parents_primary" />
 
 <TextView
     android:layout_width="wrap_content"
