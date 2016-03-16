@@ -30,5 +30,7 @@
     <color name="parent_header_sc">#1D1D1B</color>
 
     <color name="list_bck">#EBEBEB</color>
+    <color name="list_layer">#AAC2A3</color>
+
 
 </resources>

@@ -3,7 +3,7 @@ package fr.ynov.applpc;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.widget.ListView;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,18 +19,17 @@ public class CvlActivity extends ActionBarActivity {
         setCustomActionBar();
         setContentView(R.layout.activity_cvl);
 
-        CustomAdapter myAdapter = new CustomAdapter(this, new ArrayList<String[]>(), R.layout.list_item_view,
-                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item},
-                new int[]{this.getResources().getColor(R.color.cvl_primary)});
-        ListView listView = (ListView) findViewById(R.id.listview_cvl);
-        listView.setAdapter(myAdapter);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.listview_cvl);
+
+        CustomAdapter myAdapter = new CustomAdapter(this, linearLayout, R.layout.list_item_view,
+                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item}, new int[]{this.getResources().getColor(R.color.cvl_primary)});
 
         downloadDatas(myAdapter);
     }
 
     private void downloadDatas(CustomAdapter customAdapter){
         DataCVLProvider dataCVLProvider = new DataCVLProvider(this);
-        customAdapter.addAll(Arrays.asList(dataCVLProvider.getDatas()));
+        customAdapter.addAll(new ArrayList<>(Arrays.asList(dataCVLProvider.getDatas())));
     }
 
     private void setCustomActionBar(){

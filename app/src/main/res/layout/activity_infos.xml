@@ -18,8 +18,8 @@
         android:layout_alignParentTop="true"
         android:id="@+id/infos_header"/>
 
+
     <LinearLayout
-        android:layout_below="@+id/infos_header"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,56 +27,62 @@
         android:background="@color/background"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingTop="20dp">
+        android:layout_below="@+id/infos_header">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:weightSum="1">
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bck_radius"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp">
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="40dp">
 
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:id="@+id/imageinfos"
-                    android:src="@drawable/infos"
-                    android:layout_marginLeft="20dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/infos_header_sc"
-                    android:id="@+id/textinfos"
-                    android:textColor="@color/main_font"
-                    android:layout_gravity="center_vertical"
-                    android:textSize="25dp"
-                    android:layout_marginLeft="8dp" />
+                    android:background="@drawable/bck_radius"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:id="@+id/imageinfos"
+                        android:src="@drawable/infos"
+                        android:layout_marginLeft="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/infos_header_sc"
+                        android:id="@+id/textinfos"
+                        android:textColor="@color/main_font"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="25dp"
+                        android:layout_marginLeft="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listview_infos"
+                    android:background="@color/list_bck"
+                    android:orientation="vertical" />
+
             </LinearLayout>
 
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/listview_infos"
-                android:paddingTop="10dp"
-                android:background="@color/list_bck" />
+        </ScrollView>
 
-        </LinearLayout>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="4dp"
-        android:background="@color/cvl_secondary"
+        android:background="@color/infos_secondary"
         android:layout_alignParentBottom="true"/>
 </RelativeLayout>
