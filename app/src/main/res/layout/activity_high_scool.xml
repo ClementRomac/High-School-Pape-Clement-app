@@ -1,267 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:weightSum="1"
-    android:src="@drawable/bg"
-    android:background="@drawable/bg">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="4dp"
+    android:paddingTop="0dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="20dp"
+    tools:context="fr.ynov.applpc.HighScoolActivity"
+    android:background="@color/high_school_primary">
 
-    <RelativeLayout
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:contextClickable="true"
-        android:id="@+id/relative_CDI"
-        android:background="#ebebeb">
-        <LinearLayout
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/high_school_secondary"
+        android:layout_alignParentTop="true"
+        android:id="@+id/highh_school_header"/>
 
-            android:orientation="horizontal"
+    <LinearLayout
+        android:layout_below="@+id/highh_school_header"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_high_school">
+
+        <RelativeLayout
             android:layout_width="300dp"
-            android:layout_height="3dp"
-            android:background="#49C300"
-            android:id="@+id/linearLayout2">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:contextClickable="true"
+            android:id="@+id/relative_CDI"
+            android:background="#ebebeb">
+            <LinearLayout
 
-        </LinearLayout>
-        <ImageView
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="3dp"
+                android:background="#49C300"
+                android:id="@+id/linearLayout2">
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/iconcdi"
+                android:clickable="true"
+                android:layout_alignTop="@+id/CDI"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/iconCdi"
+                android:layout_marginTop="3dp" />
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="C.D.I"
+                android:id="@+id/CDI"
+                android:layout_weight="0.09"
+                android:fontFamily="Open Sans Light"
+                android:focusable="false"
+                android:textAlignment="viewStart"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/flechecdi"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/CDI"
+                android:layout_alignEnd="@+id/CDI"
+                android:clickable="true"
+                android:layout_marginRight="5dp"
+                android:id="@+id/imageView4" />
+        </RelativeLayout>
+        <!--  android:onclick="redirectCDI"-->
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/iconcdi"
-            android:clickable="true"
-            android:layout_alignTop="@+id/CDI"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/iconCdi"
-            android:layout_marginTop="3dp" />
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="C.D.I"
-            android:id="@+id/CDI"
-            android:layout_weight="0.09"
-            android:fontFamily="Open Sans Light"
-            android:focusable="false"
-            android:textAlignment="viewStart"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_marginTop="32dp"
+            android:contextClickable="true"
+            android:background="#ebebeb"
+            android:id="@+id/relative_CVL">
+            <LinearLayout
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/flechecdi"
-            android:layout_centerVertical="true"
-            android:layout_alignRight="@+id/CDI"
-            android:layout_alignEnd="@+id/CDI"
-            android:clickable="true"
-            android:layout_marginRight="5dp"
-            android:id="@+id/imageView4" />
-    </RelativeLayout>
-    <!--  android:onclick="redirectCDI"-->
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="3dp"
+                android:background="#ff8400">
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/iconusers"
+                android:clickable="true"
+                android:layout_alignTop="@+id/CVL"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/iconCDI"
+                android:layout_marginTop="3dp" />
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="C.D.I"
+                android:id="@+id/CVL"
+                android:layout_weight="0.09"
+                android:fontFamily="Open Sans Light"
+                android:focusable="false"
+                android:textAlignment="textStart"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iconCDI"
+                android:layout_toEndOf="@+id/iconCDI" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:contextClickable="true"
-        android:background="#ebebeb"
-        android:id="@+id/relative_CVL">
-        <LinearLayout
-
-            android:orientation="horizontal"
-            android:layout_width="300dp"
-            android:layout_height="3dp"
-            android:background="#ff8400">
-        </LinearLayout>
-        <ImageView
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/flechecvl"
+                android:clickable="true"
+                android:id="@+id/imageView"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/CVL"
+                android:layout_alignEnd="@+id/CVL"
+                android:layout_marginRight="5dp" />
+        </RelativeLayout>
+        <!-- android:onclick="redirectCVL"-->
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/iconusers"
-            android:clickable="true"
-            android:layout_alignTop="@+id/CVL"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/iconCDI"
-            android:layout_marginTop="3dp" />
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="C.D.I"
-            android:id="@+id/CVL"
-            android:layout_weight="0.09"
-            android:fontFamily="Open Sans Light"
-            android:focusable="false"
-            android:textAlignment="textStart"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/iconCDI"
-            android:layout_toEndOf="@+id/iconCDI" />
+            android:layout_marginTop="30dp"
+            android:contextClickable="true"
+            android:id="@+id/relative_coordonnes"
+            android:background="#ebebeb">
+            <LinearLayout
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/flechecvl"
-            android:clickable="true"
-            android:id="@+id/imageView"
-            android:layout_centerVertical="true"
-            android:layout_alignRight="@+id/CVL"
-            android:layout_alignEnd="@+id/CVL"
-            android:layout_marginRight="5dp" />
-    </RelativeLayout>
-    <!-- android:onclick="redirectCVL"-->
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:contextClickable="true"
-        android:id="@+id/relative_coordonnes"
-        android:background="#ebebeb">
-        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="3dp"
+                android:background="#ba00ff"
+                android:id="@+id/linearLayout3">
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/iconcoo"
+                android:clickable="true"
+                android:layout_alignTop="@+id/contact"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/iconcoo"
+                android:layout_marginTop="3dp" />
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Coordonnées"
+                android:id="@+id/contact"
+                android:layout_weight="0.09"
+                android:fontFamily="Open Sans Light"
+                android:focusable="false"
+                android:textAlignment="textStart"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/imageView5"
+                android:layout_alignEnd="@+id/imageView5" />
 
-            android:orientation="horizontal"
-            android:layout_width="300dp"
-            android:layout_height="3dp"
-            android:background="#ba00ff"
-            android:id="@+id/linearLayout3">
-        </LinearLayout>
-        <ImageView
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/flechecoo"
+                android:clickable="true"
+                android:id="@+id/imageView5"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/linearLayout3"
+                android:layout_alignEnd="@+id/linearLayout3"
+                android:layout_marginRight="5dp" />
+            <!-- android:onclick="redirectCoordonnees"-->
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/iconcoo"
-            android:clickable="true"
-            android:layout_alignTop="@+id/contact"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/iconcoo"
-            android:layout_marginTop="3dp" />
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="Coordonnées"
-            android:id="@+id/contact"
-            android:layout_weight="0.09"
-            android:fontFamily="Open Sans Light"
-            android:focusable="false"
-            android:textAlignment="textStart"
-            android:layout_centerVertical="true"
-            android:layout_alignRight="@+id/imageView5"
-            android:layout_alignEnd="@+id/imageView5" />
+            android:background="#ebebeb"
+            android:layout_marginTop="32dp"
+            android:contextClickable="true"
+            android:id="@+id/relative_orientation">
+            <LinearLayout
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/flechecoo"
-            android:clickable="true"
-            android:id="@+id/imageView5"
-            android:layout_centerVertical="true"
-            android:layout_alignRight="@+id/linearLayout3"
-            android:layout_alignEnd="@+id/linearLayout3"
-            android:layout_marginRight="5dp" />
-        <!-- android:onclick="redirectCoordonnees"-->
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#ebebeb"
-        android:layout_marginTop="32dp"
-        android:contextClickable="true"
-        android:id="@+id/relative_orientation">
-        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="3dp"
+                android:background="#ffc600"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout4">
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/iconorien"
+                android:clickable="true"
+                android:layout_alignTop="@+id/orientation"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/iconorien"
+                android:layout_marginTop="3dp" />
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Orientation"
+                android:id="@+id/orientation"
+                android:layout_weight="0.09"
+                android:fontFamily="Open Sans Light"
+                android:focusable="false"
+                android:textAlignment="textStart"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iconorien"
+                android:layout_toEndOf="@+id/iconorien" />
 
-            android:orientation="horizontal"
-            android:layout_width="300dp"
-            android:layout_height="3dp"
-            android:background="#ffc600"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/linearLayout4">
-        </LinearLayout>
-        <ImageView
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/flecheorien"
+                android:clickable="true"
+                android:id="@+id/imageView6"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/linearLayout4"
+                android:layout_alignEnd="@+id/linearLayout4"
+                android:layout_marginRight="5dp" />
+
+
+        </RelativeLayout>
+        <!-- android:onclick="redirectOrientation"-->
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/iconorien"
-            android:clickable="true"
-            android:layout_alignTop="@+id/orientation"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/iconorien"
-            android:layout_marginTop="3dp" />
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="Orientation"
-            android:id="@+id/orientation"
-            android:layout_weight="0.09"
-            android:fontFamily="Open Sans Light"
-            android:focusable="false"
-            android:textAlignment="textStart"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/iconorien"
-            android:layout_toEndOf="@+id/iconorien" />
+            android:layout_marginTop="32dp"
+            android:background="#ebebeb"
+            android:contextClickable="true"
+            android:id="@+id/relative_infos">
+            <LinearLayout
 
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/flecheorien"
-            android:clickable="true"
-            android:id="@+id/imageView6"
-            android:layout_centerVertical="true"
-            android:layout_alignRight="@+id/linearLayout4"
-            android:layout_alignEnd="@+id/linearLayout4"
-            android:layout_marginRight="5dp" />
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="3dp"
+                android:background="#414042"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout5">
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/iconinfos"
+                android:clickable="true"
+                android:layout_alignTop="@+id/Infos"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/iconinfos"
+                android:layout_marginTop="3dp" />
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:text="Informations"
+                android:id="@+id/Infos"
+                android:layout_weight="0.09"
+                android:fontFamily="Open Sans Light"
+                android:focusable="false"
+                android:textAlignment="textStart"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iconinfos"
+                android:layout_toEndOf="@+id/iconinfos" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/flecheinfos"
+                android:clickable="true"
+                android:id="@+id/imageView7"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/linearLayout5"
+                android:layout_alignEnd="@+id/linearLayout5"
+                android:layout_marginRight="5dp" />
+            <!-- android:onclick="redirectInfos"-->
+        </RelativeLayout>
+    </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/high_school_secondary"
+        android:layout_alignParentBottom="true"/>
 
-    </RelativeLayout>
-    <!-- android:onclick="redirectOrientation"-->
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="#ebebeb"
-        android:contextClickable="true"
-        android:id="@+id/relative_infos">
-        <LinearLayout
-
-            android:orientation="horizontal"
-            android:layout_width="300dp"
-            android:layout_height="3dp"
-            android:background="#414042"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/linearLayout5">
-        </LinearLayout>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/iconinfos"
-            android:clickable="true"
-            android:layout_alignTop="@+id/Infos"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/iconinfos"
-            android:layout_marginTop="3dp" />
-        <TextView
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="Informations"
-            android:id="@+id/Infos"
-            android:layout_weight="0.09"
-            android:fontFamily="Open Sans Light"
-            android:focusable="false"
-            android:textAlignment="textStart"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/iconinfos"
-            android:layout_toEndOf="@+id/iconinfos" />
-        <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/flecheinfos"
-            android:clickable="true"
-            android:id="@+id/imageView7"
-            android:layout_centerVertical="true"
-            android:layout_alignRight="@+id/linearLayout5"
-            android:layout_alignEnd="@+id/linearLayout5"
-            android:layout_marginRight="5dp" />
-        <!-- android:onclick="redirectInfos"-->
-    </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>
