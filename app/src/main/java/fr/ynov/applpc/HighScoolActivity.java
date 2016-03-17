@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class HighScoolActivity extends ActionBarActivity {
@@ -20,6 +21,7 @@ public class HighScoolActivity extends ActionBarActivity {
     private View.OnClickListener redirect_cdi = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            findViewById(R.id.fleche_cdi).setBackgroundResource(R.drawable.flechecdi);
             Intent intent = new Intent(HighScoolActivity.this, CdiActivity.class);
 
             startActivity(intent);
@@ -28,6 +30,7 @@ public class HighScoolActivity extends ActionBarActivity {
     private View.OnClickListener redirect_cvl = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            findViewById(R.id.fleche_cvl).setBackgroundResource(R.drawable.flechecvl);
             Intent intent = new Intent(HighScoolActivity.this, CvlActivity.class);
 
             startActivity(intent);
@@ -36,6 +39,7 @@ public class HighScoolActivity extends ActionBarActivity {
     private View.OnClickListener redirect_coordonnes = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            findViewById(R.id.fleche_contact).setBackgroundResource(R.drawable.flechecoo);
             Intent intent = new Intent(HighScoolActivity.this, ContactActivity.class);
 
             startActivity(intent);
@@ -44,6 +48,7 @@ public class HighScoolActivity extends ActionBarActivity {
     private View.OnClickListener redirect_orientation = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            findViewById(R.id.fleche_orientation).setBackgroundResource(R.drawable.flecheorien);
             Intent intent = new Intent(HighScoolActivity.this, OrietationActivity.class);
 
             startActivity(intent);
@@ -52,11 +57,20 @@ public class HighScoolActivity extends ActionBarActivity {
     private View.OnClickListener redirect_infos = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            findViewById(R.id.fleche_infos).setBackgroundResource(R.drawable.flecheinfos);
             Intent intent = new Intent(HighScoolActivity.this, InfosActivity.class);
 
             startActivity(intent);
         }
     };
+
+    private void resetPointers(){
+        findViewById(R.id.fleche_cdi).setBackgroundResource(R.drawable.flechebase);
+        findViewById(R.id.fleche_cvl).setBackgroundResource(R.drawable.flechebase);
+        findViewById(R.id.fleche_contact).setBackgroundResource(R.drawable.flechebase);
+        findViewById(R.id.fleche_orientation).setBackgroundResource(R.drawable.flechebase);
+        findViewById(R.id.fleche_infos).setBackgroundResource(R.drawable.flechebase);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,10 +91,13 @@ public class HighScoolActivity extends ActionBarActivity {
         infos.setOnClickListener(redirect_infos);
 
     }
+
     @Override
-    public void onStart() {
-        super.onStart();
+    protected void onPostResume() {
+        super.onPostResume();
+        resetPointers();
     }
+
     private void setCustomActionBar(){
         getSupportActionBar().setTitle("Lycée");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.high_school_primary)));
