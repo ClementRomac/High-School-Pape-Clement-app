@@ -15,4 +15,6 @@
     <string name="home_title_cdi">Le CDI</string>
     <string name="home_title_cvl">Le CVL</string>
     <string name="home_title_infos">Les Informations</string>
+    <string name="home_title_contact">Contact</string>
+    <string name="home_title_orientation">Orientation</string>
 </resources>

@@ -3,11 +3,10 @@ package fr.ynov.applpc;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ContactActivity extends ActionBarActivity {
     //Axel
@@ -41,7 +40,7 @@ public class ContactActivity extends ActionBarActivity {
 
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.accueil_h1_cdi);
+        getSupportActionBar().setTitle(R.string.home_title_contact);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.contact_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.contact_fleche_retour);
         getSupportActionBar().setElevation(0);
