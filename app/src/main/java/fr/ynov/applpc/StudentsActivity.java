@@ -1,25 +1,17 @@
 package fr.ynov.applpc;
 
+import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-
-import android.app.Activity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import fr.ynov.applpc.data.DataCDIProvider;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import fr.ynov.applpc.data.DataStudentsProvider;
 
 public class StudentsActivity extends ActionBarActivity {
@@ -28,6 +20,7 @@ public class StudentsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_students);
+
 
         ////////////////////////Partie Spinner/////////////////////
         Spinner spinner;

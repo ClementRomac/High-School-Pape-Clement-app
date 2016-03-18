@@ -16,10 +16,10 @@
         android:layout_height="4dp"
         android:background="@color/cdi_secondary"
         android:layout_alignParentTop="true"
-        android:id="@+id/cdi_header"/>
+        android:id="@+id/V__hight_school_cdi"/>
 
     <LinearLayout
-        android:layout_below="@+id/cdi_header"
+        android:layout_below="@+id/V__hight_school_cdi"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,17 +47,12 @@
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="20dp"
-                    android:paddingBottom="40dp">
+
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
-                        android:id="@+id/imagecdi"
+                        android:id="@+id/I_hight_school_cdi"
                         android:src="@drawable/cdi"
                         android:layout_marginLeft="20dp" />
 
@@ -65,8 +60,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/cdi_header_sc"
-                        android:id="@+id/textcdi"
+                        android:text="@string/cdi_header"
+                        android:id="@+id/tv_hight_school_cdi"
                         android:textColor="@color/main_font"
                         android:layout_gravity="center_vertical"
                         android:textSize="25dp"
@@ -76,7 +71,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/listview_cdi"
+                    android:id="@+id/LV_hight_school_cdi"
                     android:background="@color/list_bck"
                     android:orientation="vertical" />
 

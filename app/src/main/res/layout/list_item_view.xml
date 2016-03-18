@@ -8,7 +8,7 @@
     android:paddingRight="20dp">
 
     <TextView
-        android:id="@+id/title_list_item"
+        android:id="@+id/TV_list_item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -17,7 +17,7 @@
         />
 
     <TextView
-        android:id="@+id/date_list_item"
+        android:id="@+id/TV_list_item_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
@@ -25,7 +25,7 @@
         />
 
     <TextView
-        android:id="@+id/text_list_item"
+        android:id="@+id/TV_list_item_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"

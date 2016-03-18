@@ -22,7 +22,7 @@ public class CvlActivity extends ActionBarActivity {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.listview_cvl);
 
         CustomAdapter myAdapter = new CustomAdapter(this, linearLayout, R.layout.list_item_view,
-                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item}, new int[]{this.getResources().getColor(R.color.cvl_primary)});
+                new int[]{R.id.TV_list_item_title, R.id.TV_list_item_date, R.id.TV_list_item_text}, new int[]{this.getResources().getColor(R.color.cvl_primary)});
 
         downloadDatas(myAdapter);
     }
@@ -33,9 +33,9 @@ public class CvlActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.accueil_h1_cvl);
+        getSupportActionBar().setTitle(R.string.home_title_cvl);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cvl_primary)));
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cvl_fleche_retour);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cvl_arrow);
         getSupportActionBar().setElevation(0);
     }
 

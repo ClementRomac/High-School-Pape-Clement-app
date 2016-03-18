@@ -9,10 +9,10 @@
     `<string name="accueil_h2_parent">Section destinée aux parents.</string>
     `<string name="parent_header">Parents</string>
     <string name="parent_header_sc">Activité</string>
-    <string name="cdi_header_sc">Actualité</string>
-    <string name="cvl_header_sc">Actualité</string>
-    <string name="infos_header_sc">Actualité</string>
-    <string name="accueil_h1_cdi">Le CDI</string>
-    <string name="accueil_h1_cvl">Le CVL</string>
-    <string name="accueil_h1_infos">Les Informations</string>
+    <string name="cdi_header">Actualité</string>
+    <string name="cvl_header">Actualité</string>
+    <string name="infos_header">Actualité</string>
+    <string name="home_title_cdi">Le CDI</string>
+    <string name="home_title_cvl">Le CVL</string>
+    <string name="home_title_infos">Les Informations</string>
 </resources>
