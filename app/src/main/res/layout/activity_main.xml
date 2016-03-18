@@ -109,7 +109,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:paddingLeft="10dp"
-                    android:background="@color/accueil_bck_lycee_trans"
+                    android:background="@color/color_main_lyceeTransparency"
                     android:gravity="center_vertical" />
             </LinearLayout>
 
@@ -157,7 +157,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:paddingLeft="10dp"
-                    android:background="@color/accueil_bck_eleve_trans"
+                    android:background="@color/color_main_eleveTransparency"
                     android:gravity="center_vertical"/>
             </LinearLayout>
 
@@ -205,7 +205,7 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:paddingLeft="10dp"
-                    android:background="@color/accueil_bck_parent_trans"
+                    android:background="@color/color_main_parentsTransparency"
                     android:gravity="center_vertical"/>
             </LinearLayout>
 

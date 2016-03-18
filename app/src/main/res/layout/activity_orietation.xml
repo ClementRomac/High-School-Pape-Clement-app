@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</LinearLayout>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="4dp"
+    android:paddingTop="0dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="20dp"
+    tools:context="fr.ynov.applpc.OrietationActivity"
+    android:background="@color/orientation_primary">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/orientation_secondary"
+        android:layout_alignParentTop="true"
+        android:id="@+id/orientation_header"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/orientation_header">
+
+
+        <TextView
+            android:layout_width="288dp"
+            android:layout_height="137dp"
+            android:text="www.onisep.fr"
+            android:id="@+id/textView_orientation"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/orientation_secondary"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
