@@ -25,55 +25,64 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
 
-        <ImageView
+        <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView2"
-            android:src="@drawable/resultat"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp"
-            android:layout_marginBottom="20dp" />
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:id="@+id/scrollView" >
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bck_radius"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="32dp"
-                    android:id="@+id/imageView3"
-                    android:src="@drawable/megaphone"
-                    android:layout_marginLeft="20dp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/parent_header_sc"
-                    android:id="@+id/textView2"
-                    android:textColor="@color/main_font"
-                    android:layout_gravity="center_vertical"
-                    android:textSize="25dp"
-                    android:layout_marginLeft="8dp" />
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/resultat"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginBottom="20dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bck_radius"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:id="@+id/imageView3"
+                        android:src="@drawable/megaphone"
+                        android:layout_marginLeft="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/parent_header_sc"
+                        android:id="@+id/textView2"
+                        android:textColor="@color/main_font"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="25dp"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listview_parents"></LinearLayout>
+
             </LinearLayout>
+        </ScrollView>
 
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/listView" />
-
-        </LinearLayout>
     </LinearLayout>
 
     <View
