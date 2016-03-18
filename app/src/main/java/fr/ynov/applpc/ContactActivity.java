@@ -20,9 +20,20 @@ public class ContactActivity extends ActionBarActivity {
         TextView b_browser = (TextView)findViewById(R.id.textView_phone);
         b_browser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String phone = "0557266300";
+                String phone = "tel: 0557266300";
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(phone));
                 startActivity(intent);
+            }
+        });
+
+        TextView mail_browser = (TextView)findViewById(R.id.Mail);
+        mail_browser.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("message/rfc822");
+                intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"vie-scolaire@lycee-pape-clement.fr"});
+                Intent mailer = Intent.createChooser(intent, null);
+                startActivity(mailer);
             }
         });
 
