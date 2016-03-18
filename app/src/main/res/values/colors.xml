@@ -24,9 +24,9 @@
     <color name="cvl_secondary">#A65600</color>
     <color name="infos_secondary">#2A2A2B</color>
 
-    <color name="accueil_bck_lycee_trans">#9946C6E7</color>
-    <color name="accueil_bck_eleve_trans">#99C2BC33</color>
-    <color name="accueil_bck_parent_trans">#99EE3560</color>
+    <color name="color_main_lyceeTransparency">#9946C6E7</color>
+    <color name="color_main_eleveTransparency">#99C2BC33</color>
+    <color name="color_main_parentsTransparency">#99EE3560</color>
     <color name="parent_header_sc">#1D1D1B</color>
 
     <color name="list_bck">#EBEBEB</color>

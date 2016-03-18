@@ -3,6 +3,12 @@ package fr.ynov.applpc;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import fr.ynov.applpc.data.DataParentsProvider;
 
 public class ParentsActivity extends ActionBarActivity {
     //Cedric
@@ -13,6 +19,18 @@ public class ParentsActivity extends ActionBarActivity {
 
         setCustomActionBar();
         setContentView(R.layout.activity_parents);
+
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.listview_parents);
+
+        CustomAdapter myAdapter = new CustomAdapter(this, linearLayout, R.layout.list_item_view,
+                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item}, new int[]{this.getResources().getColor(R.color.parents_primary)});
+
+        downloadDatas(myAdapter);
+    }
+
+    private void downloadDatas(CustomAdapter customAdapter){
+        DataParentsProvider dataParentsProvider = new DataParentsProvider(this);
+        customAdapter.addAll(new ArrayList<>(Arrays.asList(dataParentsProvider.getDatas())));
     }
 
     private void setCustomActionBar(){
