@@ -128,7 +128,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="#ba00ff"
+                android:background="@color/contact_primary"
                 android:id="@+id/linearLayout3">
             </LinearLayout>
             <ImageView
@@ -175,7 +175,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="#ffc600"
+                android:background="@color/orientation_primary"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
