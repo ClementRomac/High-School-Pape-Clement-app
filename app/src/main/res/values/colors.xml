@@ -15,6 +15,8 @@
     <color name="cdi_primary">#49C300</color>
     <color name="cvl_primary">#ff8400</color>
     <color name="infos_primary">#414042</color>
+    <color name="contact_primary">#ba00ff</color>
+    <color name="orientation_primary">#ffc600</color>
 
     <!-- Color secondary -->
     <color name="high_school_secondary">#297F94</color>
@@ -23,6 +25,8 @@
     <color name="cdi_secondary">#307F00</color>
     <color name="cvl_secondary">#A65600</color>
     <color name="infos_secondary">#2A2A2B</color>
+    <color name="contact_secondary">#7900a6</color>
+    <color name="orientation_secondary">#a68100</color>
 
     <color name="accueil_bck_lycee_trans">#9946C6E7</color>
     <color name="accueil_bck_eleve_trans">#99C2BC33</color>
