@@ -30,7 +30,7 @@ public class FetchDataTask extends AsyncTask<String, Void, Object> {
         try{
             final String FORECAST_BASE_URL ="http://groovyou.hol.es/API_LPC.php?";
 
-            Uri builtUri =Uri.parse(FORECAST_BASE_URL).buildUpon()
+            Uri builtUri = Uri.parse(FORECAST_BASE_URL).buildUpon()
                     .appendQueryParameter("infos", params[0])
                     .appendQueryParameter("apikey", "3cc31cd246149aec68079241e71e98f6")
                     .build();
@@ -77,13 +77,6 @@ public class FetchDataTask extends AsyncTask<String, Void, Object> {
                 }
             }
         }
-
-        //WeatherDataParser weatherDataParser = new WeatherDataParser(getContext());
-        //try {
-          //  return weatherDataParser.getWeatherDataFromJson(DataJson, numDays);
-        //} catch (JSONException e) {
-           // e.printStackTrace();
-        //}
 
         return DataJson;
     }
