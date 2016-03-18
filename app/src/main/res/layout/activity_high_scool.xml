@@ -33,9 +33,8 @@
             android:id="@+id/relative_CDI"
             android:background="#ebebeb">
             <LinearLayout
-
                 android:orientation="horizontal"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="#49C300"
                 android:id="@+id/linearLayout2">
@@ -67,27 +66,26 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flechecdi"
+                android:background="@drawable/flechebase"
                 android:layout_centerVertical="true"
                 android:layout_alignRight="@+id/CDI"
                 android:layout_alignEnd="@+id/CDI"
                 android:clickable="true"
                 android:layout_marginRight="5dp"
-                android:id="@+id/imageView4" />
+                android:id="@+id/fleche_cdi" />
         </RelativeLayout>
         <!--  android:onclick="redirectCDI"-->
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:contextClickable="true"
             android:background="#ebebeb"
             android:id="@+id/relative_CVL">
             <LinearLayout
-
                 android:orientation="horizontal"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="#ff8400">
             </LinearLayout>
@@ -104,7 +102,7 @@
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:text="C.D.I"
+                android:text="C.V.L"
                 android:id="@+id/CVL"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
@@ -117,9 +115,9 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flechecvl"
+                android:background="@drawable/flechebase"
                 android:clickable="true"
-                android:id="@+id/imageView"
+                android:id="@+id/fleche_cvl"
                 android:layout_centerVertical="true"
                 android:layout_alignRight="@+id/CVL"
                 android:layout_alignEnd="@+id/CVL"
@@ -127,16 +125,15 @@
         </RelativeLayout>
         <!-- android:onclick="redirectCVL"-->
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:contextClickable="true"
             android:id="@+id/relative_coordonnes"
             android:background="#ebebeb">
             <LinearLayout
-
                 android:orientation="horizontal"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="#ba00ff"
                 android:id="@+id/linearLayout3">
@@ -161,15 +158,15 @@
                 android:focusable="false"
                 android:textAlignment="textStart"
                 android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/imageView5"
-                android:layout_alignEnd="@+id/imageView5" />
+                android:layout_toRightOf="@+id/iconcoo"
+                android:layout_toEndOf="@+id/iconcoo"/>
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flechecoo"
+                android:background="@drawable/flechebase"
                 android:clickable="true"
-                android:id="@+id/imageView5"
+                android:id="@+id/fleche_contact"
                 android:layout_centerVertical="true"
                 android:layout_alignRight="@+id/linearLayout3"
                 android:layout_alignEnd="@+id/linearLayout3"
@@ -177,7 +174,7 @@
             <!-- android:onclick="redirectCoordonnees"-->
         </RelativeLayout>
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="#ebebeb"
             android:layout_marginTop="32dp"
@@ -186,7 +183,7 @@
             <LinearLayout
 
                 android:orientation="horizontal"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="#ffc600"
                 android:layout_alignParentTop="true"
@@ -220,9 +217,9 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flecheorien"
+                android:background="@drawable/flechebase"
                 android:clickable="true"
-                android:id="@+id/imageView6"
+                android:id="@+id/fleche_orientation"
                 android:layout_centerVertical="true"
                 android:layout_alignRight="@+id/linearLayout4"
                 android:layout_alignEnd="@+id/linearLayout4"
@@ -232,7 +229,7 @@
         </RelativeLayout>
         <!-- android:onclick="redirectOrientation"-->
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:background="#ebebeb"
@@ -241,7 +238,7 @@
             <LinearLayout
 
                 android:orientation="horizontal"
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="#414042"
                 android:layout_alignParentTop="true"
@@ -274,9 +271,9 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flecheinfos"
+                android:background="@drawable/flechebase"
                 android:clickable="true"
-                android:id="@+id/imageView7"
+                android:id="@+id/fleche_infos"
                 android:layout_centerVertical="true"
                 android:layout_alignRight="@+id/linearLayout5"
                 android:layout_alignEnd="@+id/linearLayout5"
