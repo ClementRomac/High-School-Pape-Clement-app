@@ -15,7 +15,6 @@
         android:layout_width="match_parent"
         android:layout_height="4dp"
         android:background="@color/high_school_secondary"
-        android:layout_alignParentTop="true"
         android:id="@+id/high_school_header"/>
 
     <LinearLayout
@@ -36,18 +35,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/cdi_primary"
-                android:id="@+id/linearLayout2">
+                android:id="@+id/linearLayoutCdi">
 
             </LinearLayout>
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconcdi"
                 android:layout_alignTop="@+id/CDI"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:id="@+id/iconCdi"
-                android:layout_marginTop="3dp" />
+                android:layout_marginTop="3dp"
+                android:layout_margin="10dp" />
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
@@ -55,16 +53,14 @@
                 android:id="@+id/CDI"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
-                android:textAlignment="viewStart"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                android:textSize="20dp" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flechebase"
+                android:background="@drawable/flechecdi"
                 android:layout_centerVertical="true"
                 android:layout_alignRight="@+id/CDI"
                 android:layout_alignEnd="@+id/CDI"
@@ -86,14 +82,13 @@
                 android:background="@color/cvl_primary">
             </LinearLayout>
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="52dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconusers"
                 android:layout_alignTop="@+id/CVL"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:id="@+id/iconCDI"
-                android:layout_marginTop="3dp" />
+                android:layout_marginTop="3dp"
+                android:layout_margin="10dp" />
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
@@ -101,16 +96,16 @@
                 android:id="@+id/CVL"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
-                android:textAlignment="textStart"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/iconCDI"
-                android:layout_toEndOf="@+id/iconCDI" />
+                android:textSize="20dp"
+                android:layout_alignBottom="@+id/fleche_cvl"
+                android:layout_alignParentRight="false"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flechebase"
+                android:background="@drawable/flechecvl"
                 android:id="@+id/fleche_cvl"
                 android:layout_centerVertical="true"
                 android:layout_alignRight="@+id/CVL"
@@ -129,17 +124,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/contact_primary"
-                android:id="@+id/linearLayout3">
+                android:id="@+id/linearLayoutCoo">
             </LinearLayout>
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="36dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconcoo"
                 android:layout_alignTop="@+id/contact"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:id="@+id/iconcoo"
-                android:layout_marginTop="3dp" />
+                android:layout_marginTop="3dp"
+                android:layout_margin="10dp" />
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
@@ -147,20 +141,18 @@
                 android:id="@+id/contact"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
-                android:textAlignment="textStart"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/iconcoo"
-                android:layout_toEndOf="@+id/iconcoo"/>
+                android:layout_alignParentEnd="true"
+                android:textSize="20dp" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flechebase"
+                android:background="@drawable/flechecoo"
                 android:id="@+id/fleche_contact"
                 android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/linearLayout3"
-                android:layout_alignEnd="@+id/linearLayout3"
+                android:layout_alignRight="@+id/linearLayoutCoo"
+                android:layout_alignEnd="@+id/linearLayoutCoo"
                 android:layout_marginRight="5dp" />
             <!-- android:onclick="redirectCoordonnees"-->
         </RelativeLayout>
@@ -176,20 +168,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/orientation_primary"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/linearLayout4">
+
+                android:id="@+id/linearLayoutOrientation">
             </LinearLayout>
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconorien"
                 android:layout_alignTop="@+id/orientation"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:id="@+id/iconorien"
-                android:layout_marginTop="3dp" />
+                android:layout_marginTop="3dp"
+                android:layout_margin="10dp" />
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
@@ -197,20 +186,18 @@
                 android:id="@+id/orientation"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
-                android:textAlignment="textStart"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/iconorien"
-                android:layout_toEndOf="@+id/iconorien" />
+                android:layout_alignParentEnd="true"
+                android:textSize="20dp" />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flechebase"
+                android:background="@drawable/flecheorien"
                 android:id="@+id/fleche_orientation"
                 android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/linearLayout4"
-                android:layout_alignEnd="@+id/linearLayout4"
+                android:layout_alignRight="@+id/linearLayoutOrientation"
+                android:layout_alignEnd="@+id/linearLayoutOrientation"
                 android:layout_marginRight="5dp" />
 
 
@@ -228,20 +215,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/infos_primary"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/linearLayout5">
+
+                android:id="@+id/linearLayoutInfos">
             </LinearLayout>
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconinfos"
                 android:layout_alignTop="@+id/Infos"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:id="@+id/iconinfos"
-                android:layout_marginTop="3dp" />
+                android:layout_marginTop="3dp"
+                android:layout_margin="10dp" />
             <TextView
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
@@ -249,19 +233,17 @@
                 android:id="@+id/Infos"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
-                android:textAlignment="textStart"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/iconinfos"
-                android:layout_toEndOf="@+id/iconinfos" />
+                android:layout_alignParentEnd="true"
+                android:textSize="20dp" />
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/flechebase"
+                android:background="@drawable/flecheinfos"
                 android:id="@+id/fleche_infos"
                 android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/linearLayout5"
-                android:layout_alignEnd="@+id/linearLayout5"
+                android:layout_alignRight="@+id/linearLayoutInfos"
+                android:layout_alignEnd="@+id/linearLayoutInfos"
                 android:layout_marginRight="5dp" />
             <!-- android:onclick="redirectInfos"-->
         </RelativeLayout>

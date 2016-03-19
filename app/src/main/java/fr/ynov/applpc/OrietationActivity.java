@@ -28,7 +28,7 @@ public class OrietationActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle("Orientation");
+        getSupportActionBar().setTitle(R.string.home_title_orientation);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orientation_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.orientation_fleche_retour);
         getSupportActionBar().setElevation(0);

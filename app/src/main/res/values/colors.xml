@@ -31,12 +31,16 @@
     <color name="color_main_lyceeTransparency">#9946C6E7</color>
     <color name="color_main_eleveTransparency">#99C2BC33</color>
     <color name="color_main_parentsTransparency">#99EE3560</color>
-    <color name="parent_header_sc">#1D1D1B</color>
 
+
+    <color name="list_header">#1D1D1B</color>
     <color name="list_bck">#EBEBEB</color>
     <color name="list_layer">#AAC2A3</color>
 
+    <color name="high_school_border_spinner">#686868</color>
+
     <color name="high_school_bg_elements">#ebebeb</color>
+
 
 
 </resources>

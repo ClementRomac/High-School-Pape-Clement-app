@@ -16,10 +16,10 @@
         android:layout_height="4dp"
         android:background="@color/cvl_secondary"
         android:layout_alignParentTop="true"
-        android:id="@+id/cvl_header"/>
+        android:id="@+id/v_hight_school_cvl"/>
 
         <LinearLayout
-            android:layout_below="@+id/cvl_header"
+            android:layout_below="@+id/v_hight_school_cvl"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,7 +42,7 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bck_radius"
+                        android:background="@drawable/list_header_bck_radius"
                         android:paddingTop="5dp"
                         android:paddingBottom="5dp">
 
@@ -51,7 +51,7 @@
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="32dp"
-                            android:id="@+id/imagecvl"
+                            android:id="@+id/i_hight_school_cvl"
                             android:src="@drawable/cvl"
                             android:layout_marginLeft="20dp" />
 
@@ -59,8 +59,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:text="@string/cvl_header_sc"
-                            android:id="@+id/textcvl"
+                            android:text="@string/cvl_header"
+                            android:id="@+id/tv_hight_school_cvl"
                             android:textColor="@color/main_font"
                             android:layout_gravity="center_vertical"
                             android:textSize="25dp"
@@ -70,7 +70,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/listview_cvl"
+                        android:id="@+id/lv_hight_school_cvl"
                         android:background="@color/list_bck"
                         android:orientation="vertical" />
 

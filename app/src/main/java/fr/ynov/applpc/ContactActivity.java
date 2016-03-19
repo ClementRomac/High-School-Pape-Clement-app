@@ -3,11 +3,10 @@ package fr.ynov.applpc;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class ContactActivity extends ActionBarActivity {
     //Axel
@@ -26,7 +25,7 @@ public class ContactActivity extends ActionBarActivity {
             }
         });
 
-        TextView mailBrowser = (TextView)findViewById(R.id.tv_Mail);
+        TextView mailBrowser = (TextView)findViewById(R.id.tv_mail);
         mailBrowser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
@@ -41,7 +40,7 @@ public class ContactActivity extends ActionBarActivity {
 
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle("Coordonées");
+        getSupportActionBar().setTitle(R.string.home_title_contact);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.contact_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.contact_fleche_retour);
         getSupportActionBar().setElevation(0);
