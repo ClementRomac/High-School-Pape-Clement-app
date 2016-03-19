@@ -34,7 +34,7 @@
             android:layout_width="288dp"
             android:layout_height="137dp"
             android:text="www.onisep.fr"
-            android:id="@+id/textView_orientation"
+            android:id="@+id/tv_orientation"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="50dp"
             android:clickable="true"/>

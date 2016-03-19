@@ -35,7 +35,7 @@
             />
 
         <TextView
-            android:id="@+id/textView_phone"
+            android:id="@+id/tv_phone"
             android:text="Tel : 05.57.26.63.00"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
 
         <TextView
             android:text="E-Mail : vie-scolaire@lycee-pape-clement.fr"
-            android:id="@+id/Mail"
+            android:id="@+id/tv_Mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50px"

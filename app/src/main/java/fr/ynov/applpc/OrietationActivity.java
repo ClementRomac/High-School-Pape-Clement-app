@@ -17,8 +17,8 @@ public class OrietationActivity extends ActionBarActivity {
         setCustomActionBar();
         setContentView(R.layout.activity_orietation);
 
-        TextView b_browser = (TextView)findViewById(R.id.textView_orientation);
-        b_browser.setOnClickListener(new View.OnClickListener() {
+        TextView webBrowser = (TextView)findViewById(R.id.tv_orientation);
+        webBrowser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String url = "http://www.onisep.fr";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
@@ -28,7 +28,7 @@ public class OrietationActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.accueil_h1_cdi);
+        getSupportActionBar().setTitle("Orientation");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orientation_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.orientation_fleche_retour);
         getSupportActionBar().setElevation(0);
