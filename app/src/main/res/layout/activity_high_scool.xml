@@ -21,7 +21,7 @@
         android:layout_below="@+id/high_school_header"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/high_school_bg">
 
         <RelativeLayout
@@ -39,8 +39,8 @@
 
             </LinearLayout>
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconcdi"
                 android:layout_alignTop="@+id/CDI"
                 android:id="@+id/iconCdi"
@@ -81,11 +81,12 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/cvl_primary">
+                android:background="@color/cvl_primary"
+                android:id="@+id/linearLayout">
             </LinearLayout>
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="40dp"
+                android:layout_width="52dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconusers"
                 android:layout_alignTop="@+id/CVL"
                 android:id="@+id/iconCDI"
@@ -99,10 +100,12 @@
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
                 android:focusable="false"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/iconCDI"
-                android:layout_toEndOf="@+id/iconCDI"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+
+
 
             <ImageView
                 android:layout_width="25dp"
@@ -114,7 +117,6 @@
                 android:layout_alignEnd="@+id/CVL"
                 android:layout_marginRight="5dp" />
         </RelativeLayout>
-        <!-- android:onclick="redirectCVL"-->
         <RelativeLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -129,8 +131,8 @@
                 android:id="@+id/linearLayout3">
             </LinearLayout>
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconcoo"
                 android:layout_alignTop="@+id/contact"
                 android:id="@+id/iconcoo"
@@ -176,8 +178,8 @@
                 android:id="@+id/linearLayout4">
             </LinearLayout>
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconorien"
                 android:layout_alignTop="@+id/orientation"
                 android:id="@+id/iconorien"
@@ -225,8 +227,8 @@
                 android:id="@+id/linearLayout5">
             </LinearLayout>
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:background="@drawable/iconinfos"
                 android:layout_alignTop="@+id/Infos"
                 android:id="@+id/iconinfos"

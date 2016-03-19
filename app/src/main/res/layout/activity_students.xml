@@ -31,13 +31,14 @@
         android:layout_marginLeft="30dp"
         android:textColor="#646666" />
     <Spinner
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerClass"
         android:layout_below="@+id/textViewClass"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:clickable="false"
+        android:background="@drawable/spinnerstudent"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         style="@style/Base.TextAppearance.AppCompat.Title"/>
