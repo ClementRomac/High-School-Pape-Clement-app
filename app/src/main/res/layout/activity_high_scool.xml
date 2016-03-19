@@ -21,7 +21,7 @@
         android:layout_below="@+id/high_school_header"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@drawable/high_school_bg">
 
         <RelativeLayout
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/cdi_primary"
-                android:id="@+id/linearLayout2">
+                android:id="@+id/linearLayoutCdi">
 
             </LinearLayout>
             <ImageView
@@ -53,9 +53,7 @@
                 android:id="@+id/CDI"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:textSize="20dp" />
 
@@ -81,8 +79,7 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
-                android:background="@color/cvl_primary"
-                android:id="@+id/linearLayout">
+                android:background="@color/cvl_primary">
             </LinearLayout>
             <ImageView
                 android:layout_width="52dp"
@@ -99,13 +96,11 @@
                 android:id="@+id/CVL"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
                 android:textSize="20dp"
-                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@+id/fleche_cvl"
+                android:layout_alignParentRight="false"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true" />
-
-
 
             <ImageView
                 android:layout_width="25dp"
@@ -117,6 +112,7 @@
                 android:layout_alignEnd="@+id/CVL"
                 android:layout_marginRight="5dp" />
         </RelativeLayout>
+        <!-- android:onclick="redirectCVL"-->
         <RelativeLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -128,10 +124,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="3dp"
                 android:background="@color/contact_primary"
-                android:id="@+id/linearLayout3">
+                android:id="@+id/linearLayoutCoo">
             </LinearLayout>
             <ImageView
-                android:layout_width="35dp"
+                android:layout_width="36dp"
                 android:layout_height="30dp"
                 android:background="@drawable/iconcoo"
                 android:layout_alignTop="@+id/contact"
@@ -145,9 +141,7 @@
                 android:id="@+id/contact"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:textSize="20dp" />
 
@@ -157,8 +151,8 @@
                 android:background="@drawable/flechecoo"
                 android:id="@+id/fleche_contact"
                 android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/linearLayout3"
-                android:layout_alignEnd="@+id/linearLayout3"
+                android:layout_alignRight="@+id/linearLayoutCoo"
+                android:layout_alignEnd="@+id/linearLayoutCoo"
                 android:layout_marginRight="5dp" />
             <!-- android:onclick="redirectCoordonnees"-->
         </RelativeLayout>
@@ -175,7 +169,7 @@
                 android:layout_height="3dp"
                 android:background="@color/orientation_primary"
 
-                android:id="@+id/linearLayout4">
+                android:id="@+id/linearLayoutOrientation">
             </LinearLayout>
             <ImageView
                 android:layout_width="30dp"
@@ -192,9 +186,7 @@
                 android:id="@+id/orientation"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:textSize="20dp" />
 
@@ -204,8 +196,8 @@
                 android:background="@drawable/flecheorien"
                 android:id="@+id/fleche_orientation"
                 android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/linearLayout4"
-                android:layout_alignEnd="@+id/linearLayout4"
+                android:layout_alignRight="@+id/linearLayoutOrientation"
+                android:layout_alignEnd="@+id/linearLayoutOrientation"
                 android:layout_marginRight="5dp" />
 
 
@@ -224,7 +216,7 @@
                 android:layout_height="3dp"
                 android:background="@color/infos_primary"
 
-                android:id="@+id/linearLayout5">
+                android:id="@+id/linearLayoutInfos">
             </LinearLayout>
             <ImageView
                 android:layout_width="30dp"
@@ -241,9 +233,7 @@
                 android:id="@+id/Infos"
                 android:layout_weight="0.09"
                 android:fontFamily="Open Sans Light"
-                android:focusable="false"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:textSize="20dp" />
             <ImageView
@@ -252,8 +242,8 @@
                 android:background="@drawable/flecheinfos"
                 android:id="@+id/fleche_infos"
                 android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/linearLayout5"
-                android:layout_alignEnd="@+id/linearLayout5"
+                android:layout_alignRight="@+id/linearLayoutInfos"
+                android:layout_alignEnd="@+id/linearLayoutInfos"
                 android:layout_marginRight="5dp" />
             <!-- android:onclick="redirectInfos"-->
         </RelativeLayout>
