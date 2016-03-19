@@ -4,7 +4,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,10 +19,10 @@ public class CdiActivity extends ActionBarActivity {
         setCustomActionBar();
         setContentView(R.layout.activity_cdi);
 
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.listview_cdi);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.LV_hight_school_cdi);
 
         CustomAdapter myAdapter = new CustomAdapter(this, linearLayout, R.layout.list_item_view,
-                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item}, new int[]{this.getResources().getColor(R.color.cdi_primary)});
+                new int[]{R.id.TV_list_item_title, R.id.TV_list_item_date, R.id.TV_list_item_text}, new int[]{this.getResources().getColor(R.color.cdi_primary)});
 
         downloadDatas(myAdapter);
     }
@@ -34,9 +33,9 @@ public class CdiActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.accueil_h1_cdi);
+        getSupportActionBar().setTitle(R.string.home_title_cdi);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cdi_primary)));
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_fleche_retour);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_arrow);
         getSupportActionBar().setElevation(0);
     }
 }

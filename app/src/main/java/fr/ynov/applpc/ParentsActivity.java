@@ -23,7 +23,7 @@ public class ParentsActivity extends ActionBarActivity {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.listview_parents);
 
         CustomAdapter myAdapter = new CustomAdapter(this, linearLayout, R.layout.list_item_view,
-                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item}, new int[]{this.getResources().getColor(R.color.parents_primary)});
+                new int[]{R.id.TV_list_item_title, R.id.TV_list_item_date, R.id.TV_list_item_text}, new int[]{this.getResources().getColor(R.color.parents_primary)});
 
         downloadDatas(myAdapter);
     }
@@ -34,7 +34,7 @@ public class ParentsActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.accueil_h1_parent);
+        getSupportActionBar().setTitle(R.string.home_title_parents);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.parents_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.parents_fleche_retour);
         getSupportActionBar().setElevation(0);

@@ -50,7 +50,7 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bck_radius"
+                    android:background="@drawable/list_header_bck_radius"
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp">
 
@@ -78,7 +78,8 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/listview_parents"></LinearLayout>
+                    android:id="@+id/listview_parents"
+                    android:background="@color/list_bck"></LinearLayout>
 
             </LinearLayout>
         </ScrollView>

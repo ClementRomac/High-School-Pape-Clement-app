@@ -19,10 +19,10 @@ public class InfosActivity extends ActionBarActivity {
         setCustomActionBar();
         setContentView(R.layout.activity_infos);
 
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.listview_infos);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.LV_hight_school_infos);
 
         CustomAdapter myAdapter = new CustomAdapter(this, linearLayout, R.layout.list_item_view,
-                new int[]{R.id.title_list_item, R.id.date_list_item, R.id.text_list_item}, new int[]{this.getResources().getColor(R.color.infos_primary)});
+                new int[]{R.id.TV_list_item_title, R.id.TV_list_item_date, R.id.TV_list_item_text}, new int[]{this.getResources().getColor(R.color.infos_primary)});
 
         downloadDatas(myAdapter);
     }
@@ -33,9 +33,9 @@ public class InfosActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.accueil_h1_infos);
+        getSupportActionBar().setTitle(R.string.home_title_infos);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.infos_primary)));
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.infos_fleche_retour);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.infos_arrow);
         getSupportActionBar().setElevation(0);
     }
 }

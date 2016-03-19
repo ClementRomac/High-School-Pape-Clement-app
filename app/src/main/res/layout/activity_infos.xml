@@ -16,7 +16,7 @@
         android:layout_height="4dp"
         android:background="@color/infos_secondary"
         android:layout_alignParentTop="true"
-        android:id="@+id/infos_header"/>
+        android:id="@+id/V__hight_school_infos"/>
 
 
     <LinearLayout
@@ -27,7 +27,7 @@
         android:background="@color/background"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:layout_below="@+id/infos_header">
+        android:layout_below="@+id/V__hight_school_infos">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -44,14 +44,14 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bck_radius"
+                    android:background="@drawable/list_header_bck_radius"
                     android:paddingTop="5dp"
                     android:paddingBottom="5dp">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
-                        android:id="@+id/imageinfos"
+                        android:id="@+id/I_hight_school_infos"
                         android:src="@drawable/infos"
                         android:layout_marginLeft="20dp" />
 
@@ -59,8 +59,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/infos_header_sc"
-                        android:id="@+id/textinfos"
+                        android:text="@string/infos_header"
+                        android:id="@+id/TV_hight_school_infos"
                         android:textColor="@color/main_font"
                         android:layout_gravity="center_vertical"
                         android:textSize="25dp"
@@ -70,7 +70,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/listview_infos"
+                    android:id="@+id/LV_hight_school_infos"
                     android:background="@color/list_bck"
                     android:orientation="vertical" />
 
