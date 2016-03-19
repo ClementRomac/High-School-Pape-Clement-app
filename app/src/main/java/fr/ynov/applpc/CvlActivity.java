@@ -19,10 +19,10 @@ public class CvlActivity extends ActionBarActivity {
         setCustomActionBar();
         setContentView(R.layout.activity_cvl);
 
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.LV_hight_school_cvl);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.lv_hight_school_cvl);
 
         CustomAdapter myAdapter = new CustomAdapter(this, linearLayout, R.layout.list_item_view,
-                new int[]{R.id.TV_list_item_title, R.id.TV_list_item_date, R.id.TV_list_item_text}, new int[]{this.getResources().getColor(R.color.cvl_primary)});
+                new int[]{R.id.tv_list_item_title, R.id.tv_list_item_date, R.id.tv_list_item_text}, new int[]{this.getResources().getColor(R.color.cvl_primary)});
 
         downloadDatas(myAdapter);
     }

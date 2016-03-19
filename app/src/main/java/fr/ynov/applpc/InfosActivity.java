@@ -19,10 +19,10 @@ public class InfosActivity extends ActionBarActivity {
         setCustomActionBar();
         setContentView(R.layout.activity_infos);
 
-        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.LV_hight_school_infos);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.lv_hight_school_infos);
 
         CustomAdapter myAdapter = new CustomAdapter(this, linearLayout, R.layout.list_item_view,
-                new int[]{R.id.TV_list_item_title, R.id.TV_list_item_date, R.id.TV_list_item_text}, new int[]{this.getResources().getColor(R.color.infos_primary)});
+                new int[]{R.id.tv_list_item_title, R.id.tv_list_item_date, R.id.tv_list_item_text}, new int[]{this.getResources().getColor(R.color.infos_primary)});
 
         downloadDatas(myAdapter);
     }

@@ -23,7 +23,7 @@ public class ParentsActivity extends ActionBarActivity {
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.listview_parents);
 
         CustomAdapter myAdapter = new CustomAdapter(this, linearLayout, R.layout.list_item_view,
-                new int[]{R.id.TV_list_item_title, R.id.TV_list_item_date, R.id.TV_list_item_text}, new int[]{this.getResources().getColor(R.color.parents_primary)});
+                new int[]{R.id.tv_list_item_title, R.id.tv_list_item_date, R.id.tv_list_item_text}, new int[]{this.getResources().getColor(R.color.parents_primary)});
 
         downloadDatas(myAdapter);
     }
