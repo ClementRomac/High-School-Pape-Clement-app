@@ -99,7 +99,7 @@ public class HighScoolActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle("Lycée");
+        getSupportActionBar().setTitle(R.string.home_title_high_school);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.high_school_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.high_school_fleche_retour);
         getSupportActionBar().setElevation(0);

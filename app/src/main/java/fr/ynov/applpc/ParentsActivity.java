@@ -34,7 +34,7 @@ public class ParentsActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.accueil_h1_parent);
+        getSupportActionBar().setTitle(R.string.home_title_parents);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.parents_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.parents_fleche_retour);
         getSupportActionBar().setElevation(0);
