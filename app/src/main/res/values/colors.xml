@@ -28,9 +28,9 @@
     <color name="contact_secondary">#7900a6</color>
     <color name="orientation_secondary">#a68100</color>
 
-    <color name="color_main_lyceeTransparency">#9946C6E7</color>
-    <color name="color_main_eleveTransparency">#99C2BC33</color>
-    <color name="color_main_parentsTransparency">#99EE3560</color>
+    <color name="color_home_lycee_transparency">#9946C6E7</color>
+    <color name="color_home_eleve_transparency">#99C2BC33</color>
+    <color name="color_home_parents_transparency">#99EE3560</color>
 
 
     <color name="list_header">#1D1D1B</color>

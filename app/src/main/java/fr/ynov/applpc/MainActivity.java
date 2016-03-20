@@ -8,12 +8,10 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import fr.ynov.applpc.data.DataStudentsProvider;
-
 public class MainActivity extends ActionBarActivity {
-    private RelativeLayout lycee = null;
-    private RelativeLayout eleve = null;
-    private RelativeLayout parent = null;
+    private RelativeLayout highschool = null;
+    private RelativeLayout students = null;
+    private RelativeLayout parents = null;
 
     private View.OnClickListener redirect_lycee = new View.OnClickListener() {
         @Override
@@ -47,13 +45,13 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        lycee = (RelativeLayout) findViewById(R.id.accueil_rl_lycee);
-        eleve = (RelativeLayout) findViewById(R.id.accueil_rl_eleve);
-        parent = (RelativeLayout) findViewById(R.id.accueil_rl_parent);
+        highschool = (RelativeLayout) findViewById(R.id.rl_home_highschool);
+        students = (RelativeLayout) findViewById(R.id.rl_home_students);
+        parents = (RelativeLayout) findViewById(R.id.rl_home_parents);
 
-        lycee.setOnClickListener(redirect_lycee);
-        eleve.setOnClickListener(redirect_eleve);
-        parent.setOnClickListener(redirect_parent);
+        highschool.setOnClickListener(redirect_lycee);
+        students.setOnClickListener(redirect_eleve);
+        parents.setOnClickListener(redirect_parent);
 
     }
 
@@ -61,13 +59,4 @@ public class MainActivity extends ActionBarActivity {
     public void onStart() {
         super.onStart();
     }
-
-    /*private void downloadDatas() {
-        DataStudentsProvider dataStudentsProvider = new DataStudentsProvider(this);
-        dataStudentsProvider.getClasses();
-        dataStudentsProvider.getScheduleByClass("Terminale SIN");
-
-    }*/
-
-
 }
