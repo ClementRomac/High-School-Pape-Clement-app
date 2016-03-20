@@ -1,7 +1,9 @@
 package fr.ynov.applpc;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -14,75 +16,72 @@ import java.util.List;
 
 import fr.ynov.applpc.data.DataStudentsProvider;
 
-public class StudentsActivity extends ActionBarActivity {
+public class StudentsActivity extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
 //Pierre
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_students);
-
+        setCustomActionBar();
 
         ////////////////////////Partie Spinner/////////////////////
         Spinner spinner;
-        //http://marclabs.com/comment-configurer-spinner-liste-deroulante-sur-android
-        //Récupération du Spinner déclaré dans le fichier activity_students.xml de res/layout
-        spinner = (Spinner) findViewById(R.id.spinnerClass);
-        //Création d'une liste d'élément à mettre dans le Spinner(pour l'exemple)
+        spinner = (Spinner) findViewById(R.id.spinner_students);
         List listClasses = new ArrayList();
         downloadClasses(listClasses);
+
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, listClasses);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //Enfin on passe l'adapter au Spinner et c'est tout
         spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+
         spinner.setSelection(0);//default value
 
-
-        ////////////////////////Partie Calendar/////////////////////
-
-
-        String studentClasses = spinner.getSelectedItem().toString();
-        ;
-        String[][] Calendar = downloadCalendar(studentClasses);
-        WriteCalendar(Calendar);
-
-        // Creating adapter for spinner
-
-
-        // Drop down layout style - list view with radio button
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // attaching data adapter to spinner
-        spinner.setAdapter(adapter);
     }
 
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             // On selecting a spinner item
             String item = parent.getItemAtPosition(position).toString();
 
-        String studentClasses=item;
-        String[][] Calendar  =downloadCalendar(studentClasses);
-        WriteCalendar(Calendar);
+            String studentClasses = item;
+            String[][] Calendar  = downloadCalendar(studentClasses);
+            WriteCalendar(Calendar);
+            TextView textViewClassSelected = (TextView) findViewById(R.id.tv_students_selected_class);
+            textViewClassSelected.setText(studentClasses);
 
         }
-    private void WriteCalendar( String[][] studentClasses){
-        final TextView textLundi = (TextView) findViewById(R.id.textLundi);
-        final TextView textMardi = (TextView) findViewById(R.id.textMardi);
-        final TextView textMercredi = (TextView) findViewById(R.id.textMercredi);
-        final TextView textJeudi = (TextView) findViewById(R.id.textJeudi);
-        final TextView textVendredi = (TextView) findViewById(R.id.textVendredi);
 
-        textLundi.setText(studentClasses[0][0]);
-        textMardi.setText(studentClasses[0][1]);
-        textMercredi.setText(studentClasses[0][2]);
-        textJeudi.setText(studentClasses[0][3]);
-        textVendredi.setText(studentClasses[0][4]);
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    private void WriteCalendar( String[][] studentClasses){
+        TextView textLundi = (TextView) findViewById(R.id.tv_students_monday_schedule);
+        TextView textMardi = (TextView) findViewById(R.id.tv_students_tuesday_schedule);
+        TextView textMercredi = (TextView) findViewById(R.id.tv_students_wednesday_schedule);
+        TextView textJeudi = (TextView) findViewById(R.id.tv_students_thursday_schedule);
+        TextView textVendredi = (TextView) findViewById(R.id.tv_students_friday_schedule);
+
+        textLundi.setText(studentClasses[0][0].replace("<br>", System.getProperty("line.separator")));
+        textMardi.setText(studentClasses[0][1].replace("<br>", System.getProperty ("line.separator")));
+        textMercredi.setText(studentClasses[0][2].replace("<br>", System.getProperty ("line.separator")));
+        textJeudi.setText(studentClasses[0][3].replace("<br>", System.getProperty ("line.separator")));
+        textVendredi.setText(studentClasses[0][4].replace("<br>", System.getProperty ("line.separator")));
     }
     private void downloadClasses(List listClasses){
         DataStudentsProvider DataStudentsProvider = new DataStudentsProvider(this);
         listClasses.addAll(Arrays.asList(DataStudentsProvider.getClasses()));
+        //Log.d("test", DataStudentsProvider.getClasses()[1]);
     }
     private String[][] downloadCalendar(String studentClasses){
         DataStudentsProvider DataStudentsProvider = new DataStudentsProvider(this);
         return DataStudentsProvider.getScheduleByClass(studentClasses);
+    }
+    private void setCustomActionBar(){
+        getSupportActionBar().setTitle("Elèves");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.students_primary)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_arrow);
+        getSupportActionBar().setElevation(0);
     }
 }

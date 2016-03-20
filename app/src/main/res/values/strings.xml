@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppLPC</string>
+    <string name="app_name">Lycée Pape Clément</string>
     <string name="title_activity_students">StudentsActivity</string>
     <string name="home_highschool_title">Le Lycée</string>
     <string name="home_highschool_description">Toutes les informations sur votre établissement.</string>
@@ -21,4 +21,10 @@
     <string name="parents_activity_title">Parents</string>
     <string name="high_school_activity_title">Le Lycée</string>
     <string name="students_activity_title">StudentsActivity</string>
+    <string name="students_title_class">Choisissez votre classe :</string>
+    <string name="students_monday">Lundi</string>
+    <string name="students_tuesday">Mardi</string>
+    <string name="students_wednesday">Mercredi</string>
+    <string name="students_thursday">Jeudi</string>
+    <string name="students_friday">Vendredi</string>
 </resources>
