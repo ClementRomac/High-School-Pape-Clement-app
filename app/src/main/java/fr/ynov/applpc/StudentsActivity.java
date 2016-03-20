@@ -3,7 +3,6 @@ package fr.ynov.applpc;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -57,17 +56,17 @@ public class StudentsActivity extends ActionBarActivity implements AdapterView.O
     }
 
     private void WriteCalendar( String[][] studentClasses){
-        TextView textLundi = (TextView) findViewById(R.id.tv_students_monday_schedule);
-        TextView textMardi = (TextView) findViewById(R.id.tv_students_tuesday_schedule);
-        TextView textMercredi = (TextView) findViewById(R.id.tv_students_wednesday_schedule);
-        TextView textJeudi = (TextView) findViewById(R.id.tv_students_thursday_schedule);
-        TextView textVendredi = (TextView) findViewById(R.id.tv_students_friday_schedule);
+        TextView textMonday = (TextView) findViewById(R.id.tv_students_monday_schedule);
+        TextView textTuesday = (TextView) findViewById(R.id.tv_students_tuesday_schedule);
+        TextView textWednesday = (TextView) findViewById(R.id.tv_students_wednesday_schedule);
+        TextView textThursday = (TextView) findViewById(R.id.tv_students_thursday_schedule);
+        TextView textFriday = (TextView) findViewById(R.id.tv_students_friday_schedule);
 
-        textLundi.setText(studentClasses[0][0].replace("<br>", System.getProperty("line.separator")));
-        textMardi.setText(studentClasses[0][1].replace("<br>", System.getProperty ("line.separator")));
-        textMercredi.setText(studentClasses[0][2].replace("<br>", System.getProperty ("line.separator")));
-        textJeudi.setText(studentClasses[0][3].replace("<br>", System.getProperty ("line.separator")));
-        textVendredi.setText(studentClasses[0][4].replace("<br>", System.getProperty ("line.separator")));
+        textMonday.setText(studentClasses[0][0].replace("<br>", System.getProperty("line.separator")));
+        textTuesday.setText(studentClasses[0][1].replace("<br>", System.getProperty("line.separator")));
+        textWednesday.setText(studentClasses[0][2].replace("<br>", System.getProperty("line.separator")));
+        textThursday.setText(studentClasses[0][3].replace("<br>", System.getProperty("line.separator")));
+        textFriday.setText(studentClasses[0][4].replace("<br>", System.getProperty ("line.separator")));
     }
     private void downloadClasses(List listClasses){
         DataStudentsProvider DataStudentsProvider = new DataStudentsProvider(this);
