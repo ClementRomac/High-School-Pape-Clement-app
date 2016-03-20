@@ -17,8 +17,8 @@ public class OrietationActivity extends ActionBarActivity {
         setCustomActionBar();
         setContentView(R.layout.activity_orietation);
 
-        TextView b_browser = (TextView)findViewById(R.id.textView_orientation);
-        b_browser.setOnClickListener(new View.OnClickListener() {
+        TextView webBrowser = (TextView)findViewById(R.id.tv_orientation);
+        webBrowser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String url = "http://www.onisep.fr";
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
