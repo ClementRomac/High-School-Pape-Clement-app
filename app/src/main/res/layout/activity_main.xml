@@ -17,11 +17,12 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/accueil_logo_pape_clement"
+            android:id="@+id/iv_main_logo_pape_clement"
             android:src="@drawable/logo_pape_clement"
             android:layout_marginLeft="100dp"
             android:layout_marginRight="100dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true" />
 
         <!--<LinearLayout
             android:orientation="vertical"
@@ -32,7 +33,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/accueil_lycee2"
+                android:id="@+id/iv_main_image_highschool"
                 android:src="@drawable/lycee2" />
 
             <!--<LinearLayout
@@ -71,12 +72,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:contextClickable="true"
-            android:id="@+id/accueil_rl_lycee">
+            android:id="@+id/rl_main_highschool">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/accueil_lycee"
+                android:id="@+id/iv_main_highschool_button"
                 android:src="@drawable/lycee"
                 android:layout_alignParentBottom="true"
                 android:adjustViewBounds="true"/>
@@ -90,11 +91,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/accueil_h1_lycee"
+                    android:id="@+id/tv_main_highschool_title"
                     android:layout_weight="2"
                     android:textColor="@color/main_font"
                     android:singleLine="true"
-                    android:text="@string/accueil_h1_lycee"
+                    android:text="@string/main_highschool_title"
                     android:textAlignment="center"
                     android:background="@color/high_school_primary"
                     android:elegantTextHeight="false"
@@ -103,8 +104,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h2_lycee"
-                    android:id="@+id/accueil_h2_lycee"
+                    android:text="@string/main_highschool_description"
+                    android:id="@+id/tv_main_highschool_description"
                     android:textColor="@color/main_font"
                     android:layout_weight="1"
                     android:layout_gravity="center"
@@ -120,12 +121,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:contextClickable="true"
-            android:id="@+id/accueil_rl_eleve">
+            android:id="@+id/rl_main_students">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/accueil_eleve"
+                android:id="@+id/iv_main_students_button"
                 android:src="@drawable/eleve"
                 android:layout_alignParentBottom="true"
                 android:adjustViewBounds="true"/>
@@ -139,8 +140,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h1_eleve"
-                    android:id="@+id/accueil_h1_eleve"
+                    android:text="@string/main_students_title"
+                    android:id="@+id/tv_main_students_title"
                     android:layout_weight="2"
                     android:textColor="@color/main_font"
                     android:textAlignment="center"
@@ -151,8 +152,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h2_eleve"
-                    android:id="@+id/accueil_h2_eleve"
+                    android:text="@string/main_students_description"
+                    android:id="@+id/tv_main_students_description"
                     android:textColor="@color/main_font"
                     android:layout_weight="1"
                     android:layout_gravity="center"
@@ -168,12 +169,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:contextClickable="true"
-            android:id="@+id/accueil_rl_parent">
+            android:id="@+id/rl_main_parents">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/accueil_parent"
+                android:id="@+id/iv_main_parents_button"
                 android:src="@drawable/parents"
                 android:layout_alignParentBottom="true"
                 android:adjustViewBounds="true"/>
@@ -187,8 +188,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h1_parent"
-                    android:id="@+id/accueil_h1_parent"
+                    android:text="@string/main_parents_title"
+                    android:id="@+id/tv_main_parents_title"
                     android:layout_weight="2"
                     android:textColor="@color/main_font"
                     android:textAlignment="center"
@@ -199,8 +200,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h2_parent"
-                    android:id="@+id/accueil_h2_parent"
+                    android:text="@string/main_parents_description"
+                    android:id="@+id/tv_main_parents_description"
                     android:textColor="@color/main_font"
                     android:layout_weight="1"
                     android:layout_gravity="center"
