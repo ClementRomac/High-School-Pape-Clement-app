@@ -24,229 +24,259 @@
         android:layout_height="match_parent"
         android:background="@drawable/high_school_bg">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:id="@+id/relative_CDI"
-            android:background="@color/high_school_bg_elements">
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/cdi_primary"
-                android:id="@+id/linearLayoutCdi">
-
-            </LinearLayout>
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/iconcdi"
-                android:layout_alignTop="@+id/CDI"
-                android:id="@+id/iconCdi"
-                android:layout_marginTop="3dp"
-                android:layout_margin="10dp" />
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:text="C.D.I"
-                android:id="@+id/CDI"
-                android:layout_weight="0.09"
-                android:fontFamily="Open Sans Light"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:textSize="20dp" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/flechecdi"
-                android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/CDI"
-                android:layout_alignEnd="@+id/CDI"
-                android:layout_marginRight="5dp"
-                android:id="@+id/fleche_cdi" />
-        </RelativeLayout>
-        <!--  android:onclick="redirectCDI"-->
-
-        <RelativeLayout
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:id="@+id/ll_highschool_cdi"
             android:background="@color/high_school_bg_elements"
-            android:id="@+id/relative_CVL">
+            android:orientation="vertical">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/cvl_primary">
-            </LinearLayout>
-            <ImageView
-                android:layout_width="52dp"
-                android:layout_height="30dp"
-                android:background="@drawable/iconusers"
-                android:layout_alignTop="@+id/CVL"
-                android:id="@+id/iconCDI"
-                android:layout_marginTop="3dp"
-                android:layout_margin="10dp" />
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:text="C.V.L"
-                android:id="@+id/CVL"
-                android:layout_weight="0.09"
-                android:fontFamily="Open Sans Light"
-                android:textSize="20dp"
-                android:layout_alignBottom="@+id/fleche_cvl"
-                android:layout_alignParentRight="false"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true" />
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/flechecvl"
-                android:id="@+id/fleche_cvl"
-                android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/CVL"
-                android:layout_alignEnd="@+id/CVL"
-                android:layout_marginRight="5dp" />
-        </RelativeLayout>
-        <!-- android:onclick="redirectCVL"-->
-        <RelativeLayout
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:id="@+id/relative_coordonnes"
-            android:background="@color/high_school_bg_elements">
+                android:layout_height="5dp"
+                android:background="@color/cdi_primary"/>
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/contact_primary"
-                android:id="@+id/linearLayoutCoo">
-            </LinearLayout>
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="30dp"
-                android:background="@drawable/iconcoo"
-                android:layout_alignTop="@+id/contact"
-                android:id="@+id/iconcoo"
-                android:layout_marginTop="3dp"
-                android:layout_margin="10dp" />
-            <TextView
-                android:layout_width="220dp"
-                android:layout_height="wrap_content"
-                android:text="Coordonnées"
-                android:id="@+id/contact"
-                android:layout_weight="0.09"
-                android:fontFamily="Open Sans Light"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:textSize="20dp" />
+                android:layout_height="2dp"
+                android:background="@color/cdi_secondary"/>
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/flechecoo"
-                android:id="@+id/fleche_contact"
-                android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/linearLayoutCoo"
-                android:layout_alignEnd="@+id/linearLayoutCoo"
-                android:layout_marginRight="5dp" />
-            <!-- android:onclick="redirectCoordonnees"-->
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:background="@color/high_school_bg_elements"
-            android:layout_marginTop="32dp"
-            android:id="@+id/relative_orientation">
             <LinearLayout
-
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/orientation_primary"
-
-                android:id="@+id/linearLayoutOrientation">
-            </LinearLayout>
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/iconorien"
-                android:layout_alignTop="@+id/orientation"
-                android:id="@+id/iconorien"
-                android:layout_marginTop="3dp"
-                android:layout_margin="10dp" />
-            <TextView
-                android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:text="Orientation"
-                android:id="@+id/orientation"
-                android:layout_weight="0.09"
-                android:fontFamily="Open Sans Light"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:textSize="20dp" />
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
 
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/flecheorien"
-                android:id="@+id/fleche_orientation"
-                android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/linearLayoutOrientation"
-                android:layout_alignEnd="@+id/linearLayoutOrientation"
-                android:layout_marginRight="5dp" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/iconcdi"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:text="@string/cdi_activity_title"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"/>
 
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/flechebase"
+                    android:id="@+id/iv_highschool_fleche_cdi" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="end"
+                android:text="Dernière nouvelle : "
+                android:textSize="8dp"
+                android:id="@+id/tv_highschool_cdi"
+                android:layout_marginRight="2dp"/>
+        </LinearLayout>
 
-        </RelativeLayout>
-        <!-- android:onclick="redirectOrientation"-->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:id="@+id/ll_highschool_cvl"
             android:background="@color/high_school_bg_elements"
-            android:id="@+id/relative_infos">
+            android:orientation="vertical">
             <LinearLayout
-
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/infos_primary"
+                android:layout_height="5dp"
+                android:background="@color/cvl_primary"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/cvl_secondary"/>
 
-                android:id="@+id/linearLayoutInfos">
-            </LinearLayout>
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/iconinfos"
-                android:layout_alignTop="@+id/Infos"
-                android:id="@+id/iconinfos"
-                android:layout_marginTop="3dp"
-                android:layout_margin="10dp" />
-            <TextView
-                android:layout_width="220dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Informations"
-                android:id="@+id/Infos"
-                android:layout_weight="0.09"
-                android:fontFamily="Open Sans Light"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:textSize="20dp" />
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/flecheinfos"
-                android:id="@+id/fleche_infos"
-                android:layout_centerVertical="true"
-                android:layout_alignRight="@+id/linearLayoutInfos"
-                android:layout_alignEnd="@+id/linearLayoutInfos"
-                android:layout_marginRight="5dp" />
-            <!-- android:onclick="redirectInfos"-->
-        </RelativeLayout>
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/iconcvl"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:text="@string/cvl_activity_title"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/flechebase"
+                    android:id="@+id/iv_highschool_fleche_cvl" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="end"
+                android:text="Dernière nouvelle : "
+                android:textSize="8dp"
+                android:id="@+id/tv_highschool_cvl"
+                android:layout_marginRight="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:id="@+id/ll_highschool_contact"
+            android:background="@color/high_school_bg_elements"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/contact_primary"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/contact_secondary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/iconcoo"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:text="@string/contact_activity_title"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/flechebase"
+                    android:id="@+id/iv_highschool_fleche_contact" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:id="@+id/ll_highschool_orientation"
+            android:background="@color/high_school_bg_elements"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/orientation_primary"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/orientation_secondary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/iconorien"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:text="@string/orientation_activity_title"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/flechebase"
+                    android:id="@+id/iv_highschool_fleche_orientation" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:id="@+id/ll_highschool_infos"
+            android:background="@color/high_school_bg_elements"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/infos_primary"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/infos_secondary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/iconinfos"
+                    android:layout_centerVertical="true"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:text="@string/infos_activity_title"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/flechebase"
+                    android:id="@+id/iv_highschool_fleche_infos" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="end"
+                android:text="Dernière nouvelle : "
+                android:textSize="8dp"
+                android:id="@+id/tv_highschool_infos"
+                android:layout_marginRight="2dp"/>
+        </LinearLayout>
     </LinearLayout>
 
     <View
