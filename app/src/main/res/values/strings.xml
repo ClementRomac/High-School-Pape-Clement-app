@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppLPC</string>
+    <string name="app_name">Lycée Pape Clément</string>
     <string name="title_activity_students">StudentsActivity</string>
     <string name="main_highschool_title">Le Lycée</string>
     <string name="main_highschool_description">Toutes les informations sur votre établissement.</string>
