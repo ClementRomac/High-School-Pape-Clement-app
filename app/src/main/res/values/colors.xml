@@ -37,10 +37,13 @@
     <color name="list_bck">#EBEBEB</color>
     <color name="list_layer">#AAC2A3</color>
 
-    <color name="high_school_border_spinner">#686868</color>
-
+    <color name="students_border_spinner">#686868</color>
     <color name="high_school_bg_elements">#ebebeb</color>
-
+    <color name="high_school_Day_bleu">#304CAD</color>
+    <color name="high_school_Day_vert">#49C300</color>
+    <color name="high_school_Day_orange">#FF8500</color>
+    <color name="high_school_Day_jaune">#FFF200</color>
+    <color name="high_school_Day_rouge">#ED1C24</color>
 
 
 </resources>

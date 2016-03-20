@@ -1,5 +1,6 @@
 package fr.ynov.applpc;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -20,7 +21,7 @@ public class StudentsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_students);
-
+        setCustomActionBar();
 
         ////////////////////////Partie Spinner/////////////////////
         Spinner spinner;
@@ -37,6 +38,7 @@ public class StudentsActivity extends ActionBarActivity {
         spinner.setSelection(0);//default value
 
 
+
         ////////////////////////Partie Calendar/////////////////////
 
 
@@ -44,6 +46,9 @@ public class StudentsActivity extends ActionBarActivity {
         ;
         String[][] Calendar = downloadCalendar(studentClasses);
         WriteCalendar(Calendar);
+
+        TextView textViewClassSelected = (TextView) findViewById(R.id.textViewClassSelected);
+        textViewClassSelected.setText(studentClasses);
 
         // Creating adapter for spinner
 
@@ -60,8 +65,10 @@ public class StudentsActivity extends ActionBarActivity {
             String item = parent.getItemAtPosition(position).toString();
 
         String studentClasses=item;
-        String[][] Calendar  =downloadCalendar(studentClasses);
+        String[][] Calendar  = downloadCalendar(studentClasses);
         WriteCalendar(Calendar);
+            TextView textViewClassSelected = (TextView) findViewById(R.id.textViewClassSelected);
+            textViewClassSelected.setText(studentClasses);
 
         }
     private void WriteCalendar( String[][] studentClasses){
@@ -84,5 +91,11 @@ public class StudentsActivity extends ActionBarActivity {
     private String[][] downloadCalendar(String studentClasses){
         DataStudentsProvider DataStudentsProvider = new DataStudentsProvider(this);
         return DataStudentsProvider.getScheduleByClass(studentClasses);
+    }
+    private void setCustomActionBar(){
+        getSupportActionBar().setTitle("Elèves");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.students_primary)));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_arrow);
+        getSupportActionBar().setElevation(0);
     }
 }
