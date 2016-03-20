@@ -25,7 +25,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.ynov.applpc.MainActivity" />
         </activity>
-        <activity android:name=".HighScoolActivity">
+        <activity android:name=".HighSchoolActivity">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value="fr.ynov.applpc.MainActivity" />
@@ -33,27 +33,27 @@
         <activity android:name=".CdiActivity">
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="fr.ynov.applpc.HighScoolActivity" />
+            android:value=".HighSchoolActivity" />
         </activity>
         <activity android:name=".CvlActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.ynov.applpc.HighScoolActivity" />
+                android:value=".HighSchoolActivity" />
         </activity>
         <activity android:name=".InfosActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.ynov.applpc.HighScoolActivity" />
+                android:value=".HighSchoolActivity" />
         </activity>
         <activity android:name=".ContactActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.ynov.applpc.HighScoolActivity" />
+                android:value=".HighSchoolActivity" />
         </activity>
         <activity android:name=".OrietationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="fr.ynov.applpc.HighScoolActivity" />
+                android:value=".HighSchoolActivity" />
         </activity>
         <activity android:name=".StudentsActivity">
             <meta-data

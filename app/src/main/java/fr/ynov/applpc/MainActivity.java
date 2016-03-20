@@ -16,7 +16,7 @@ public class MainActivity extends ActionBarActivity {
     private View.OnClickListener redirect_lycee = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this, HighScoolActivity.class);
+            Intent intent = new Intent(MainActivity.this, HighSchoolActivity.class);
 
             startActivity(intent);
         }

@@ -8,7 +8,7 @@
     android:paddingTop="0dp"
     android:paddingRight="4dp"
     android:paddingBottom="20dp"
-    tools:context="fr.ynov.applpc.HighScoolActivity"
+    tools:context=".HighSchoolActivity"
     android:background="@color/high_school_primary">
 
     <View
