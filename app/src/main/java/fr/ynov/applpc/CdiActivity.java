@@ -33,7 +33,7 @@ public class CdiActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.home_title_cdi);
+        getSupportActionBar().setTitle(R.string.cdi_activity_title);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cdi_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.cdi_arrow);
         getSupportActionBar().setElevation(0);

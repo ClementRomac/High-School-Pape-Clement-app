@@ -50,7 +50,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.ynov.applpc.HighScoolActivity" />
         </activity>
-        <activity android:name=".OrietationActivity">
+        <activity android:name=".OrientationActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fr.ynov.applpc.HighScoolActivity" />

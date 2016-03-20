@@ -94,7 +94,7 @@
                     android:layout_weight="2"
                     android:textColor="@color/main_font"
                     android:singleLine="true"
-                    android:text="@string/accueil_h1_lycee"
+                    android:text="@string/home_h1_lycee"
                     android:textAlignment="center"
                     android:background="@color/high_school_primary"
                     android:elegantTextHeight="false"
@@ -103,7 +103,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h2_lycee"
+                    android:text="@string/home_h2_lycee"
                     android:id="@+id/accueil_h2_lycee"
                     android:textColor="@color/main_font"
                     android:layout_weight="1"
@@ -139,7 +139,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h1_eleve"
+                    android:text="@string/home_h1_eleve"
                     android:id="@+id/accueil_h1_eleve"
                     android:layout_weight="2"
                     android:textColor="@color/main_font"
@@ -151,7 +151,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h2_eleve"
+                    android:text="@string/home_h2_eleve"
                     android:id="@+id/accueil_h2_eleve"
                     android:textColor="@color/main_font"
                     android:layout_weight="1"
@@ -187,7 +187,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h1_parent"
+                    android:text="@string/home_h1_parent"
                     android:id="@+id/accueil_h1_parent"
                     android:layout_weight="2"
                     android:textColor="@color/main_font"
@@ -199,7 +199,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/accueil_h2_parent"
+                    android:text="@string/home_h2_parent"
                     android:id="@+id/accueil_h2_parent"
                     android:textColor="@color/main_font"
                     android:layout_weight="1"

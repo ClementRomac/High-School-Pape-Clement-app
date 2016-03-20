@@ -33,7 +33,7 @@ public class InfosActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.home_title_infos);
+        getSupportActionBar().setTitle(R.string.infos_activity_title);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.infos_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.infos_arrow);
         getSupportActionBar().setElevation(0);

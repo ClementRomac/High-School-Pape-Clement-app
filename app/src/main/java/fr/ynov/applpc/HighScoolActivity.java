@@ -5,8 +5,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 public class HighScoolActivity extends ActionBarActivity {
@@ -49,7 +47,7 @@ public class HighScoolActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             findViewById(R.id.fleche_orientation).setBackgroundResource(R.drawable.flecheorien);
-            Intent intent = new Intent(HighScoolActivity.this, OrietationActivity.class);
+            Intent intent = new Intent(HighScoolActivity.this, OrientationActivity.class);
 
             startActivity(intent);
         }
@@ -99,7 +97,7 @@ public class HighScoolActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.home_title_high_school);
+        getSupportActionBar().setTitle(R.string.high_school_activity_title);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.high_school_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.high_school_fleche_retour);
         getSupportActionBar().setElevation(0);

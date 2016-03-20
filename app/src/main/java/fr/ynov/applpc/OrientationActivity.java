@@ -8,19 +8,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class OrietationActivity extends ActionBarActivity {
+public class OrientationActivity extends ActionBarActivity {
 //Axel tt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().setTitle("Orientation");
         setCustomActionBar();
-        setContentView(R.layout.activity_orietation);
+        setContentView(R.layout.activity_orientation);
 
-        TextView webBrowser = (TextView)findViewById(R.id.tv_orientation);
+        final TextView webBrowser = (TextView)findViewById(R.id.tv_orientation);
         webBrowser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String url = "http://www.onisep.fr";
+                String url = "http://"+webBrowser.getText().toString();
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
             }
@@ -28,7 +27,7 @@ public class OrietationActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.home_title_orientation);
+        getSupportActionBar().setTitle(R.string.orientation_activity_title);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orientation_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.orientation_fleche_retour);
         getSupportActionBar().setElevation(0);

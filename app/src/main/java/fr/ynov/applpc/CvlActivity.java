@@ -33,7 +33,7 @@ public class CvlActivity extends ActionBarActivity {
     }
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.home_title_cvl);
+        getSupportActionBar().setTitle(R.string.cvl_activity_title);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.cvl_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.cvl_arrow);
         getSupportActionBar().setElevation(0);

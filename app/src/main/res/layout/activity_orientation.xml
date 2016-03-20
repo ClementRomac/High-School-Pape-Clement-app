@@ -10,7 +10,7 @@
     android:paddingTop="0dp"
     android:paddingRight="4dp"
     android:paddingBottom="20dp"
-    tools:context="fr.ynov.applpc.OrietationActivity"
+    tools:context=".OrientationActivity"
     android:background="@color/orientation_primary">
 
     <View

@@ -16,21 +16,21 @@ public class ContactActivity extends ActionBarActivity {
         setContentView(R.layout.activity_contact);
         setCustomActionBar();
 
-        TextView phoneBrowser = (TextView)findViewById(R.id.tv_phone);
+        final TextView phoneBrowser = (TextView)findViewById(R.id.tv_contact_phone);
         phoneBrowser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String phone = "tel: 0557266300";
+                String phone = phoneBrowser.getText().toString().replace(".", "").replace("Tel : ", "tel: ");
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(phone));
                 startActivity(intent);
             }
         });
 
-        TextView mailBrowser = (TextView)findViewById(R.id.tv_mail);
+        final TextView mailBrowser = (TextView)findViewById(R.id.tv_contact_mail);
         mailBrowser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");
-                intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"vie-scolaire@lycee-pape-clement.fr"});
+                intent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {mailBrowser.getText().toString()});
                 Intent mailer = Intent.createChooser(intent, null);
                 startActivity(mailer);
             }
@@ -40,7 +40,7 @@ public class ContactActivity extends ActionBarActivity {
 
 
     private void setCustomActionBar(){
-        getSupportActionBar().setTitle(R.string.home_title_contact);
+        getSupportActionBar().setTitle(R.string.contact_activity_title);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.contact_primary)));
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.contact_fleche_retour);
         getSupportActionBar().setElevation(0);
