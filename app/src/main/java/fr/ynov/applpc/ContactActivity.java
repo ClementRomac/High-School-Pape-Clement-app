@@ -16,8 +16,8 @@ public class ContactActivity extends ActionBarActivity {
         setContentView(R.layout.activity_contact);
         setCustomActionBar();
 
-        TextView b_browser = (TextView)findViewById(R.id.textView_phone);
-        b_browser.setOnClickListener(new View.OnClickListener() {
+        TextView phoneBrowser = (TextView)findViewById(R.id.tv_phone);
+        phoneBrowser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String phone = "tel: 0557266300";
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse(phone));
@@ -25,8 +25,8 @@ public class ContactActivity extends ActionBarActivity {
             }
         });
 
-        TextView mail_browser = (TextView)findViewById(R.id.Mail);
-        mail_browser.setOnClickListener(new View.OnClickListener() {
+        TextView mailBrowser = (TextView)findViewById(R.id.tv_mail);
+        mailBrowser.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("message/rfc822");

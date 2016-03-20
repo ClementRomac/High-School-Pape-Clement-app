@@ -16,7 +16,7 @@
         android:layout_height="4dp"
         android:background="@color/infos_secondary"
         android:layout_alignParentTop="true"
-        android:id="@+id/V__hight_school_infos"/>
+        android:id="@+id/v_infos"/>
 
 
     <LinearLayout
@@ -27,7 +27,7 @@
         android:background="@color/background"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:layout_below="@+id/V__hight_school_infos">
+        android:layout_below="@+id/v_infos">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
-                        android:id="@+id/I_hight_school_infos"
+                        android:id="@+id/i_infos"
                         android:src="@drawable/infos"
                         android:layout_marginLeft="20dp" />
 
@@ -60,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/infos_header"
-                        android:id="@+id/TV_hight_school_infos"
+                        android:id="@+id/tv_infos"
                         android:textColor="@color/main_font"
                         android:layout_gravity="center_vertical"
                         android:textSize="25dp"
@@ -70,7 +70,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/LV_hight_school_infos"
+                    android:id="@+id/lv_infos"
                     android:background="@color/list_bck"
                     android:orientation="vertical" />
 

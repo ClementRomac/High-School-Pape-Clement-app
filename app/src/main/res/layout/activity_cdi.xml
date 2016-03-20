@@ -16,10 +16,10 @@
         android:layout_height="4dp"
         android:background="@color/cdi_secondary"
         android:layout_alignParentTop="true"
-        android:id="@+id/V__hight_school_cdi"/>
+        android:id="@+id/v_cdi"/>
 
     <LinearLayout
-        android:layout_below="@+id/V__hight_school_cdi"
+        android:layout_below="@+id/v_cdi"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,7 +52,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="32dp"
-                        android:id="@+id/I_hight_school_cdi"
+                        android:id="@+id/i_cdi"
                         android:src="@drawable/cdi"
                         android:layout_marginLeft="20dp" />
 
@@ -61,7 +61,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/cdi_header"
-                        android:id="@+id/tv_hight_school_cdi"
+                        android:id="@+id/tv_cdi"
                         android:textColor="@color/main_font"
                         android:layout_gravity="center_vertical"
                         android:textSize="25dp"
@@ -71,7 +71,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/LV_hight_school_cdi"
+                    android:id="@+id/lv_cdi"
                     android:background="@color/list_bck"
                     android:orientation="vertical" />
 

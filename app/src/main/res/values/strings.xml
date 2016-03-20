@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">AppLPC</string>
     <string name="title_activity_students">StudentsActivity</string>
-    <string name="accueil_h1_lycee">Le Lycée</string>
-    <string name="accueil_h2_lycee">Toutes les informations sur votre établissement.</string>
-    <string name="accueil_h1_eleve">Élèves</string>
-    <string name="accueil_h2_eleve">Section destinée aux élèves.</string>
-    <string name="accueil_h1_parent">Parents</string>
-    <string name="accueil_h2_parent">Section destinée aux parents.</string>
+    <string name="main_highschool_title">Le Lycée</string>
+    <string name="main_highschool_description">Toutes les informations sur votre établissement.</string>
+    <string name="main_students_title">Élèves</string>
+    <string name="main_students_description">Section destinée aux élèves.</string>
+    <string name="main_parents_title">Parents</string>
+    <string name="main_parents_description">Section destinée aux parents.</string>
 
     <string name="parent_header_sc">Activité</string>
     <string name="cdi_header">Actualité</string>
