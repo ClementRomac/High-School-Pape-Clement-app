@@ -10,4 +10,4 @@ Designer :
   - Victor Gondat
   
 Subject :
-School projet for the Android Course. Androi application for the high school Pape Clément.
+School projet for the Android Course. Android application for the high school Pape Clément.
