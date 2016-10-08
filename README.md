@@ -6,9 +6,7 @@ Contributors :
   - Nathan Prevost
   - Axel Masset
   - Clément Romac
-\n
-Designer :
-  - Victor Gondat
+  - Victor Gondat (Designer)
   
 Subject :
 School projet for the Android Course. Android application for the high school Pape Clément.
