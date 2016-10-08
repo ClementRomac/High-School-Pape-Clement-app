@@ -6,6 +6,7 @@ Contributors :
   - Nathan Prevost
   - Axel Masset
   - Clément Romac
+\n
 Designer :
   - Victor Gondat
   
